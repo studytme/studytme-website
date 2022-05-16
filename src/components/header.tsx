@@ -23,7 +23,7 @@ const Header = () => (
           <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent  rounded hover:text-[#b8a1ff] ">
             <div className="flex items-center justify-center">
               <span>
-                <Link href="https://studytme-shop.fourthwall.com/cart" passHref>
+                <Link href="https://studytme.com/merch/" passHref>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

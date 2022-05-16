@@ -161,9 +161,7 @@ const Home: NextPage = () => {
             <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF]  hover:text-white hover:border-transparent">
               <div className="flex items-center justify-center">
                 <span>
-                  <Link href="https://studytme-shop.fourthwall.com/collections/all">
-                    Check the merch
-                  </Link>
+                  <Link href="https://studytme.com/merch/">Check the merch</Link>
                 </span>
               </div>
             </button>
