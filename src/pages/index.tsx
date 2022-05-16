@@ -1,16 +1,14 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
-import Header from '../components/header'
-import Socials from '../components/socials'
-import Footer from '../components/footer'
-
-import Gprofile from './images/360g.gif'
-import Merch0 from './images/basic sand t.png'
-import Merch2 from './images/merch1.png'
-import Merch3 from './images/merch3.png'
-import BasicMug from './images/basicmug.png'
-import Link from 'next/link'
-
+import BasicMug from "../images/basicmug.png";
+import Footer from "../components/footer";
+import Gprofile from "../images/360g.gif";
+import Header from "../components/header";
+import Image from "next/image";
+import Link from "next/link";
+import Merch0 from "../images/basic sand t.png";
+import Merch2 from "../images/merch1.png";
+import Merch3 from "../images/merch3.png";
+import Socials from "../components/socials";
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
@@ -18,12 +16,11 @@ const Home: NextPage = () => {
       <Header />
       <div className="flex-grow px-0 mx-4 lg:mx-24">
         <div className="grid items-center grid-cols-3 gap-12 py-10 md:mx-20 md:px-12">
-          <div className='max-h-screen '>
+          <div className="max-h-screen ">
             <Image
               layout="responsive"
               width="1080"
               height="1920"
-
               objectFit="cover"
               className="border-none shadow-lg align-10 middle rounded-3xl"
               src={Gprofile}
@@ -38,7 +35,7 @@ const Home: NextPage = () => {
 
             <p className="lg:text-2xl md:mt-12"> Giulia is the founder of the CEOgang.</p>
             <p className="lg:text-2xl">
-              {' '}
+              {" "}
               She has now finished her studies in Data Science and Digital marketing but she keeps
               leading the community towards more productivity and mental health while working on her
               projects.
@@ -161,19 +158,21 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex justify-center my-5">
-          <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF]  hover:text-white hover:border-transparent">
-                  <div className="flex items-center justify-center">
-                    <span>
-                      <Link href="https://studytme-shop.fourthwall.com/collections/all">Check the merch</Link>
-                    </span>
-                  </div>
-                </button>
+            <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF]  hover:text-white hover:border-transparent">
+              <div className="flex items-center justify-center">
+                <span>
+                  <Link href="https://studytme-shop.fourthwall.com/collections/all">
+                    Check the merch
+                  </Link>
+                </span>
+              </div>
+            </button>
           </div>
         </div>
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

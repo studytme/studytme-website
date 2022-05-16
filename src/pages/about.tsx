@@ -4,5 +4,5 @@ export default function About() {
       <h1>You suck</h1>
       <div></div>
     </div>
-  )
+  );
 }

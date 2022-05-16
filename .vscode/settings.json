@@ -1,6 +1,30 @@
 {
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "src/app/node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.validate": [
+    "typescript, javascript"
+  ],
   "cSpell.words": [
+    "basicmug",
     "Giulia",
-    "Mazza"
+    "Gprofile",
+    "Mazza",
+    "Merch"
   ]
 }

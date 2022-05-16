@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from "next/link";
+import React from "react";
 
 const Header = () => (
   <div className="items-center mx-8 lg:mx-24">
@@ -8,22 +8,22 @@ const Header = () => (
         <h1 className="mb-4 text-3xl font-black text-[#612DFF] md:mb-0">
           <Link href="/">STUDYTME</Link>
         </h1>
-        
+
         <ul className="md:items-center md:flex">
           <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
-            <Link href="/about">Merch</Link>
+            <Link href="/about">About</Link>
           </li>
 
           <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
-            <Link href="/sponsors">Sposors</Link>
+            <Link href="/sponsors">Sponsors</Link>
           </li>
         </ul>
-        
+
         <div className="justify-center">
           <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent  rounded hover:text-[#b8a1ff] ">
             <div className="flex items-center justify-center">
               <span>
-                <Link href="https://studytme-shop.fourthwall.com/cart">
+                <Link href="https://studytme-shop.fourthwall.com/cart" passHref>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -42,6 +42,6 @@ const Header = () => (
       </div>
     </header>
   </div>
-)
+);
 
-export default Header
+export default Header;
