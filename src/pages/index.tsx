@@ -12,7 +12,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="w-screen max-w-full">
       <Header />
       <div className="flex-grow px-0 mx-4 lg:mx-24">
         <div className="grid items-center grid-cols-3 gap-12 py-10 md:mx-20 md:px-12">
