@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './header'
-import Socials from './socials'
-import Footer from './footer'
+import Header from '../components/header'
+import Socials from '../components/socials'
+import Footer from '../components/footer'
 
 const Sponsors = () => (
   <div className="">
@@ -11,13 +11,12 @@ const Sponsors = () => (
             <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
 
             <Socials />
-            
+
             <h3 className='text-2xl font-bold lg:'>About</h3>
             <p className="lg:text-2xl">
               {' '}
               Content creator and community manager addicted to productivity
             </p>
-          </div>
 
           <div>
           <h3 className='text-2xl font-bold lg:'>Audience</h3>
@@ -26,7 +25,8 @@ const Sponsors = () => (
               Content creator and community manager addicted to productivity
             </p>
           </div>
-          
+          </div>
+
     <Footer />
   </div>
 )

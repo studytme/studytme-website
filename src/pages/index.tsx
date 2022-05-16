@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Header from './header'
-import Socials from './socials'
-import Footer from './footer'
+import Header from '../components/header'
+import Socials from '../components/socials'
+import Footer from '../components/footer'
 
-import Gprofile from 'H:/Documents/studytme website/website/src/pages/images/360g.gif'
-import Merch0 from 'H:/Documents/studytme website/website/src/pages/images/basic sand t.png'
-import Merch2 from 'H:/Documents/studytme website/website/src/pages/images/merch1.png'
-import Merch3 from 'H:/Documents/studytme website/website/src/pages/images/merch3.png'
-import BasicMug from 'H:/Documents/studytme website/website/src/pages/images/basicmug.png'
+import Gprofile from './images/360g.gif'
+import Merch0 from './images/basic sand t.png'
+import Merch2 from './images/merch1.png'
+import Merch3 from './images/merch3.png'
+import BasicMug from './images/basicmug.png'
 import Link from 'next/link'
 
 
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
               layout="responsive"
               width="1080"
               height="1920"
-            
+
               objectFit="cover"
               className="border-none shadow-lg align-10 middle rounded-3xl"
               src={Gprofile}
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
 
             <Socials />
-            
+
             <p className="lg:text-2xl md:mt-12"> Giulia is the founder of the CEOgang.</p>
             <p className="lg:text-2xl">
               {' '}
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
               <Image className="rounded-lg fill-current " src={BasicMug} alt="helo" />
             </div>
           </div>
-          
+
           <div className="flex justify-center my-5">
           <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF]  hover:text-white hover:border-transparent">
                   <div className="flex items-center justify-center">
