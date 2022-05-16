@@ -2,7 +2,7 @@ import React from "react";
 
 const Socials = () => (
   <div className="socials">
-    <div className="flex pt-9 pb-9">
+    <div className="flex pt-9 pb-6">
       <a href="https://twitter.com/StudyTme" className="text-gray-800 mr-9 hover:text-[#612DFF]">
         <svg
           aria-hidden="true"
