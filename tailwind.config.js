@@ -1,7 +1,7 @@
+const { defaultStyles } = require("./src/styles/default-styles");
+
 module.exports = {
-  content: ['./src/**/*.{ts,tsx}'],
-  theme: {
-    extend: {},
-  },
+  ...defaultStyles,
+  content: ["./src/**/*.{ts,tsx}"],
   plugins: [],
-}
+};
