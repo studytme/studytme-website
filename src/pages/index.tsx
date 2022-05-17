@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             width="1080"
             height="1920"
             objectFit="cover"
-            className="border-none shadow-lg align-10 middle rounded-3xl"
+            className="border-none rounded-3xl"
             src={GSpin}
             alt="StudyTme Giulia Mazza photo"
           />

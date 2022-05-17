@@ -1,6 +1,6 @@
 export const Numbers = () => {
   return (
-    <div className="py-6 bg-white sm:py-8 lg:py-12">
+    <div className="col-span-2 py-6 bg-white sm:py-8 lg:py-12">
       <div className="max-w-screen-xl px-4 mx-auto md:px-8">
         <div className="mb-8 md:mb-12">
           <h2 className="mb-4 text-2xl font-bold text-center text-gray-800 lg:text-3xl md:mb-6">
