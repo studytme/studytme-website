@@ -1,9 +1,5 @@
 import { FaEnvelope } from "react-icons/fa";
 import { Numbers } from "../components/numbers";
-import Footer from "../components/footer";
-import GTransparent from "../images/gtransparent.png";
-import Header from "../components/header";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Socials from "../components/socials";
@@ -30,13 +26,11 @@ const Sponsors = () => (
       </button>
     </div>
     <div className="mb-32">
-      <Image
-        layout="responsive"
+      <img
         width="1000"
         height="1000"
-        objectFit="cover"
         className="border-none rounded-3xl"
-        src={GTransparent}
+        src={"/images/gtransparent.png"}
         alt="StudyTme Giulia Mazza photo"
       />
     </div>

@@ -1,7 +1,5 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function About() {
   return (
@@ -18,9 +16,9 @@ export default function About() {
             <p>
               G streams on Twitch around 5 days per week. She records herself studying in sessions
               of 45 mins and then takes breaks of 7mins during which she talks to the viewers,
-              discuss differnt topics, motivates or just simply entertain them with mini games. This
-              is a famous technique that G did not invent. It is called the Pomodoro technique. For
-              more info, check this website:
+              discuss different topics, motivates or just simply entertain them with mini games.
+              This is a famous technique that G did not invent. It is called the Pomodoro technique.
+              For more info, check this website:
               <a
                 href="https://todoist.com/productivity-methods/pomodoro-technique"
                 className="text-[#612DFF] hover:italic"
@@ -37,7 +35,7 @@ export default function About() {
             <p>
               There are many reasons why people are finding co-working streams useful. A part from
               the most obvious ones (improve your time tracking, combat lack of motivation and
-              isolation, ...) the following are G’s favourite.{" "}
+              isolation, ...) the following are G’s favorite.
             </p>
             <p>
               <p className="mt-3 font-bold">Body doubling</p>
