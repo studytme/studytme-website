@@ -1,17 +1,23 @@
 const colors = require("tailwindcss/colors");
 
+delete colors["lightBlue"];
+delete colors["warmGray"];
+delete colors["trueGray"];
+delete colors["coolGray"];
+delete colors["blueGray"];
+
 module.exports = {
   defaultStyles: {
     theme: {
       colors: {
+        ...colors,
         "twitch-purple": "#612DFF",
         "twitch-purple-hover": "#b8a1ff",
-        ...colors,
       },
       textColor: {
+        ...colors,
         "twitch-purple": "#612DFF",
         "twitch-purple-hover": "#b8a1ff",
-        ...colors,
       },
       spacing: {
         px: "1px",
