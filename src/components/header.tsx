@@ -1,6 +1,7 @@
 import { BsCart4 } from "react-icons/bs";
 import { HiChevronDown } from "react-icons/hi";
 import { Menu, Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { Fragment, useEffect, useState } from "react";
 
@@ -43,11 +44,12 @@ const Header = () => {
 
 const NavigationMenu = () => {
   const [page, setPage] = useState("Menu");
+  const router = useRouter();
 
   useEffect(() => {
     const current = window.location.pathname.slice(1);
     setPage(current.length > 0 ? current : "Home");
-  }, []);
+  }, [router.pathname]);
 
   return (
     <div className="visible sm:hidden">

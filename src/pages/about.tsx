@@ -41,23 +41,29 @@ export default function About() {
                 the most obvious ones (improve your time tracking, combat lack of motivation and
                 isolation, ...) the following are G&apos;s favorite.
               </p>
-              <p>
-                <span className="mt-3 font-bold">Body doubling</span>
-                Body Doubling refers to doing a task with another person present. The body double
-                does not need to actively help with the task, and they can do something unrelated
-                while you complete the task. The knowledge that someone is “present” and aware that
-                you are doing the task is intended to increase motivation and follow-through.
-                <span className="mt-3 font-bold ">Rabbit whole</span>
-                Sometimes when we are too focused on a task we forget what was the initial goal and
-                get lost in. It is good to have a reminder to look back why we started and if we are
-                wasting time on a futile task.
-                <span className="mt-3 font-bold">Routine</span>
-                The problem with relying on motivation for too long is that it can disappear without
-                warning. Focusing on routine, or as James Clear calls it in Atomic Habits, on a
-                system, allows you to push through the hard moments. G helps people in creating a
-                habit. Showing up everyday at the same time and setting clear goals will help more
-                than finding the right motivator.
-              </p>
+              <div>
+                <p className="mt-3 font-bold">Body doubling</p>
+                <p>
+                  Body Doubling refers to doing a task with another person present. The body double
+                  does not need to actively help with the task, and they can do something unrelated
+                  while you complete the task. The knowledge that someone is “present” and aware
+                  that you are doing the task is intended to increase motivation and follow-through.
+                </p>
+                <p className="mt-3 font-bold ">Rabbit hole</p>
+                <p>
+                  Sometimes when we are too focused on a task we forget what was the initial goal
+                  and get lost in. It is good to have a reminder to look back why we started and if
+                  we are wasting time on a futile task.
+                </p>
+                <p className="mt-3 font-bold">Routine</p>
+                <p>
+                  The problem with relying on motivation for too long is that it can disappear
+                  without warning. Focusing on routine, or as James Clear calls it in Atomic Habits,
+                  on a system, allows you to push through the hard moments. G helps people in
+                  creating a habit. Showing up everyday at the same time and setting clear goals
+                  will help more than finding the right motivator.
+                </p>
+              </div>
             </>
           }
         />

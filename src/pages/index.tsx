@@ -101,16 +101,32 @@ const Home: NextPage = () => {
         </div>
         <div className="grid grid-cols-2 md:mx-24 md:grid-cols-4">
           <div className="mx-2">
-            <img className="rounded-lg fill-current" src={"/images/basicSandTee.png"} alt="helo" />
+            <img
+              className="rounded-lg fill-current"
+              src={"/images/basicSandTee.png"}
+              alt="sand tee front"
+            />
           </div>
           <div className="mx-2">
-            <img className="rounded-lg fill-current" src={"/images/merch1.png"} alt="helo" />
+            <img
+              className="rounded-lg fill-current"
+              src={"/images/merch1.png"}
+              alt="black tee back"
+            />
           </div>
           <div className="invisible h-0 mx-2 md:visible md:h-auto">
-            <img className="rounded-lg fill-current " src={"/images/merch3.png"} alt="helo" />
+            <img
+              className="rounded-lg fill-current "
+              src={"/images/merch3.png"}
+              alt="sand tee back"
+            />
           </div>
           <div className="invisible h-0 mx-2 md:visible md:h-auto">
-            <img className="rounded-lg fill-current " src={"/images/basicMug.png"} alt="helo" />
+            <img
+              className="rounded-lg fill-current "
+              src={"/images/basicmug.png"}
+              alt="black mug"
+            />
           </div>
         </div>
 
