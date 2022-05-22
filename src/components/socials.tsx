@@ -7,7 +7,10 @@ const Socials = () => (
     <a href="https://twitter.com/StudyTme" className="text-gray-800 hover:text-twitch-purple">
       <AiOutlineTwitter className="w-6 h-6" />
     </a>
-    <a href="https://www.instagram.com/itsstudytme/" className="text-gray-800 hover:text-twitch-purple">
+    <a
+      href="https://www.instagram.com/itsstudytme/"
+      className="text-gray-800 hover:text-twitch-purple"
+    >
       <AiOutlineInstagram className="w-6 h-6" />
     </a>
     <a
