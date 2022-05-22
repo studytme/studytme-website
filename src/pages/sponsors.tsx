@@ -7,10 +7,10 @@ import Socials from "../components/socials";
 const Sponsors = () => (
   <div className="flex flex-col">
     <div className="flex flex-col-reverse items-center justify-between w-full sm:flex-row sm:h-headerless-screen">
-      <div className="my-10">
+      <div className="flex flex-col items-center my-10 sm:items-start">
         <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
         <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
-        <p className="lg:text-2xl">
+        <p className="text-center lg:text-2xl sm:text-left">
           Content creator and community manager addicted to productivity
         </p>
         <Socials />
@@ -29,7 +29,7 @@ const Sponsors = () => (
     </div>
 
     <SponsorSection header="Audience">
-      <div className="flex flex-col w-full gap-6 sm:flex-row justify-evenly">
+      <div className="flex flex-col w-full gap-6 mb-10 sm:flex-row justify-evenly">
         <AudienceCard
           title=" Total Followers"
           icon={<BsPeopleFill className="w-5 h-5 ml-2" />}
@@ -51,8 +51,8 @@ const Sponsors = () => (
     </SponsorSection>
 
     <SponsorSection header="Others about StudyTme">
-      <div className="flex flex-col sm:flex-row">
-        <img src="/images/lifewireLogo.svg" className="h-6 mr-1" alt="LifeWire logo" />
+      <div className="flex flex-col mb-20">
+        <img src="/images/lifewireLogo.svg" className="h-6 mb-2 sm:mr-1" alt="LifeWire logo" />
         <Link
           href={
             "https://www.lifewire.com/how-giulia-mazza-became-a-must-watch-streaming-star-5272114"
