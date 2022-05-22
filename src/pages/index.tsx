@@ -45,7 +45,7 @@ const Home: NextPage = () => {
               quisquam est.
             </p>
             <div className="flex justify-center">
-              <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF]  hover:text-white hover:border-transparent">
+              <button className="items-center px-4 py-2 mt-5 font-semibold text-twitch-purple bg-transparent border border-twitch-purple rounded hover:bg-twitch-purple  hover:text-white hover:border-transparent">
                 <div className="flex items-center justify-center">
                   <FaTwitch className="mr-2" />
                   <span>
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
               quisquam est.
             </p>
             <div className="flex justify-center">
-              <button className="px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF] hover:text-white hover:border-transparent">
+              <button className="px-4 py-2 mt-5 font-semibold text-twitch-purple bg-transparent border border-twitch-purple rounded hover:bg-twitch-purple hover:text-white hover:border-transparent">
                 <div className="flex items-center justify-center">
                   <FaYoutube className="mr-2" />
                   <span>
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
               quisquam est.
             </p>
             <div className="flex justify-center">
-              <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF] hover:text-white hover:border-transparent">
+              <button className="items-center px-4 py-2 mt-5 font-semibold text-twitch-purple bg-transparent border border-twitch-purple rounded hover:bg-twitch-purple hover:text-white hover:border-transparent">
                 <div className="flex items-center justify-center">
                   <FaDiscord className="mr-2" />
                   <span>
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
           </div>
           <a
             href="./about"
-            className="flex justify-center gap-5 py-12 place-items-center text-[#612DFF] "
+            className="flex justify-center gap-5 py-12 place-items-center text-twitch-purple "
           >
             <h5 className="hover:font-bold ">Learn more</h5>
             <svg
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="flex justify-center my-5">
-          <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF]  hover:text-white hover:border-transparent">
+          <button className="items-center px-4 py-2 mt-5 font-semibold text-twitch-purple bg-transparent border border-twitch-purple rounded hover:bg-twitch-purple  hover:text-white hover:border-transparent">
             <div className="flex items-center justify-center">
               <span>
                 <Link href="https://studytme-shop.fourthwall.com/collections/all">
