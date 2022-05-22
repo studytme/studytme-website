@@ -3,8 +3,8 @@ import Link from "next/link";
 import React from "react";
 
 const Header = () => (
-  <header className="sticky top-0 z-50 flex items-center justify-between px-6 pt-6 bg-white border-b border-gray-100 md:py-6">
-    <h1 className="text-3xl text-[#612DFF] font-black hover:underline underline-offset-2 hover:animate-pulse transition duration-500">
+  <header className="sticky top-0 z-50 flex items-center justify-between px-6 pt-6 bg-white border-b border-gray-100 h-header md:py-6">
+    <h1 className="text-3xl font-black transition duration-500 text-twitch-purple hover:underline underline-offset-2 hover:animate-pulse">
       <Link href="/">STUDYTME</Link>
     </h1>
 
@@ -21,7 +21,7 @@ const Header = () => (
     </ul>
 
     <Link href="https://studytme-shop.fourthwall.com/cart" passHref>
-      <BsCart4 className="w-6 h-6 hover:cursor-pointer fill-[#612DFF] hover:fill-[#b8a1ff]" />
+      <BsCart4 className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover" />
     </Link>
   </header>
 );

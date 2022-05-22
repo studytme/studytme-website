@@ -3,7 +3,7 @@ import Header from "../components/header";
 
 export default function About() {
   return (
-    <div className="mx-5 my-24 lg:mx-60">
+    <div className="">
       <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
       <h2 className="font-serif text-2xl italic lg:text-3xl">Why, how, who, where?</h2>
       <h3>The answers to the most asked questions</h3>
@@ -19,7 +19,7 @@ export default function About() {
             info, check this website:
             <a
               href="https://todoist.com/productivity-methods/pomodoro-technique"
-              className="text-[#612DFF] hover:italic"
+              className="text-twitch-purple hover:italic"
             >
               {" "}
               The Pomodoro Technique

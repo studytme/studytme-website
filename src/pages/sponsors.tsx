@@ -1,91 +1,98 @@
 import { BsPeopleFill } from "react-icons/bs";
 import { FaEnvelope, FaTwitch } from "react-icons/fa";
-import { Numbers } from "../components/numbers";
 import Link from "next/link";
-import React from "react";
+import React, { ReactNode } from "react";
 import Socials from "../components/socials";
 
 const Sponsors = () => (
-  <div className="grid grid-cols-2 pt-32">
-    <div className="col">
-      <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
-      <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
-      <h3 className="text-2xl font-bold lg:">About</h3>
-      <p className="lg:text-2xl">Content creator and community manager addicted to productivity</p>
-      <Socials />
-      <button className="px-5 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF] hover:text-white hover:border-transparent">
-        <div className="flex items-center justify-center">
-          <span>
-            <Link href="mailto:info@studytme.com" passHref>
-              <div className="flex items-center">
-                <FaEnvelope className="mr-2" />
-                Contact Me
-              </div>
-            </Link>
-          </span>
-        </div>
-      </button>
-    </div>
-    <div className="mb-32">
+  <div className="flex flex-col">
+    <div className="flex items-center justify-between w-full h-headerless-screen">
+      <div className="">
+        <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
+        <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
+        <h3 className="pt-4 text-2xl font-bold">About</h3>
+        <p className="lg:text-2xl">
+          Content creator and community manager addicted to productivity
+        </p>
+        <Socials />
+        <Link href="mailto:info@studytme.com" passHref>
+          <button className="flex items-center px-3 py-2 mt-2 font-semibold border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
+            <FaEnvelope className="mr-2" />
+            Contact Me
+          </button>
+        </Link>
+      </div>
       <img
-        width="1000"
-        height="1000"
-        className="border-none rounded-3xl"
+        className="w-1/2 border-none lg:w-1/2 rounded-3xl"
         src={"/images/gtransparent.png"}
         alt="StudyTme Giulia Mazza photo"
       />
     </div>
-    <div className="col-span-2">
-      <div className="">
-        <h3 className="text-2xl font-bold">Audience</h3>
-        <div className="flex flex-wrap gap-4 justify-evenly">
-          <div className="flex">
-            <div className="flex flex-col justify-between w-64 p-8 transition-shadow bg-white shadow-xl rounded-xl group hover:shadow-lg">
-              <div className="grid justify-between grid-cols-2 pt-2 mt-4 border-b-2 border-indigo-100">
-                <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-                  Total Followers
-                </p>
-                <BsPeopleFill />
-              </div>
-              <h5 className="text-5xl font-bold text-[#612DFF]">77k+</h5>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="justify-between w-64 p-8 transition-shadow bg-white shadow-xl rounded-xl group hover:shadow-lg">
-              <div className="grid justify-between grid-cols-2 pt-2 mt-4 border-b-2 border-indigo-100">
-                <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-                  Main Platform
-                </p>
-                <FaTwitch />
-              </div>
-              <h5 className="text-5xl font-bold text-[#612DFF]">Twitch</h5>
-              <p className="italic">Official Partner</p>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="justify-between w-64 p-8 transition-shadow bg-white shadow-xl rounded-xl group hover:shadow-lg">
-              <div className="grid justify-between grid-cols-2 pt-2 mt-4 border-b-2 border-indigo-100">
-                <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-                  average CCV*
-                </p>
-                <FaTwitch />
-              </div>
-              <h5 className="text-5xl font-bold text-[#612DFF]">551</h5>
-              <p className="italic">*last 30 days</p>
-            </div>
-          </div>
-        </div>
+
+    <SponsorSection header="Audience">
+      <div className="flex w-full gap-6 justify-evenly">
+        <AudienceCard
+          title=" Total Followers"
+          icon={<BsPeopleFill className="w-5 h-5 ml-2" />}
+          main="77k+"
+        />
+        <AudienceCard
+          title="Main Platform"
+          icon={<FaTwitch className="w-5 h-5 ml-2" />}
+          main="Twitch"
+          additional={<p className="italic text-slate-400">Official Partner</p>}
+        />
+        <AudienceCard
+          title="average CCV*"
+          icon={<FaTwitch className="w-5 h-5 ml-2" />}
+          main="551"
+          additional={<p className="italic text-slate-400">*last 30 days</p>}
+        />
       </div>
-    </div>
-    Written about us:
-    <Link
-      href={"https://www.lifewire.com/how-giulia-mazza-became-a-must-watch-streaming-star-5272114"}
-      passHref
-    >
-      Lifewire
-    </Link>
-    {/* <Numbers /> */}
+    </SponsorSection>
+
+    <SponsorSection header="Written about StudyTme">
+      <Link
+        href={
+          "https://www.lifewire.com/how-giulia-mazza-became-a-must-watch-streaming-star-5272114"
+        }
+        passHref
+      >
+        <button>
+          <h5 className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline">
+            LifeWire: &quot;How Giulia Mazza became a must watch streaming star&quot;
+          </h5>
+        </button>
+      </Link>
+    </SponsorSection>
   </div>
 );
+
+const SponsorSection = (props: { children?: ReactNode; header: string }) => {
+  return (
+    <div className="flex flex-col items-center w-full mb-20">
+      <h3 className="mb-6 text-4xl font-bold">{props.header}</h3>
+      {props.children}
+    </div>
+  );
+};
+
+const AudienceCard = (props: {
+  title: string;
+  icon: ReactNode;
+  main: string;
+  additional?: ReactNode;
+}) => {
+  return (
+    <div className="flex flex-col px-10 py-6 bg-white border shadow-xl rounded-xl group hover:shadow-lg">
+      <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
+        <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">{props.title}</p>
+        {props.icon}
+      </div>
+      <h5 className="text-5xl font-bold text-twitch-purple">{props.main}</h5>
+      {props.additional}
+    </div>
+  );
+};
 
 export default Sponsors;
