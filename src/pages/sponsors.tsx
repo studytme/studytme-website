@@ -6,11 +6,10 @@ import Socials from "../components/socials";
 
 const Sponsors = () => (
   <div className="flex flex-col">
-    <div className="flex items-center justify-between w-full h-headerless-screen">
-      <div className="">
+    <div className="flex flex-col-reverse items-center justify-between w-full sm:flex-row sm:h-headerless-screen">
+      <div className="my-10">
         <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
         <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
-        <h3 className="pt-4 text-2xl font-bold">About</h3>
         <p className="lg:text-2xl">
           Content creator and community manager addicted to productivity
         </p>
@@ -23,14 +22,14 @@ const Sponsors = () => (
         </Link>
       </div>
       <img
-        className="w-1/2 border-none lg:w-1/2 rounded-3xl"
-        src={"/images/gtransparent.png"}
+        className="mt-10 border-none rounded-full sm:w-1/2 w-50vw sm:rounded-3xl "
+        src={"/images/transparentG.png"}
         alt="StudyTme Giulia Mazza photo"
       />
     </div>
 
     <SponsorSection header="Audience">
-      <div className="flex w-full gap-6 justify-evenly">
+      <div className="flex flex-col w-full gap-6 sm:flex-row justify-evenly">
         <AudienceCard
           title=" Total Followers"
           icon={<BsPeopleFill className="w-5 h-5 ml-2" />}
@@ -51,27 +50,30 @@ const Sponsors = () => (
       </div>
     </SponsorSection>
 
-    <SponsorSection header="Written about StudyTme">
-      <Link
-        href={
-          "https://www.lifewire.com/how-giulia-mazza-became-a-must-watch-streaming-star-5272114"
-        }
-        passHref
-      >
-        <button>
-          <h5 className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline">
-            LifeWire: &quot;How Giulia Mazza became a must watch streaming star&quot;
-          </h5>
-        </button>
-      </Link>
+    <SponsorSection header="Others about StudyTme">
+      <div className="flex flex-col sm:flex-row">
+        <img src="/images/lifewireLogo.svg" className="h-6 mr-1" alt="LifeWire logo" />
+        <Link
+          href={
+            "https://www.lifewire.com/how-giulia-mazza-became-a-must-watch-streaming-star-5272114"
+          }
+          passHref
+        >
+          <button>
+            <h5 className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline">
+              &quot;How Giulia Mazza became a must watch streaming star&quot;
+            </h5>
+          </button>
+        </Link>
+      </div>
     </SponsorSection>
   </div>
 );
 
 const SponsorSection = (props: { children?: ReactNode; header: string }) => {
   return (
-    <div className="flex flex-col items-center w-full mb-20">
-      <h3 className="mb-6 text-4xl font-bold">{props.header}</h3>
+    <div className="flex flex-col items-center w-full my-10">
+      <h3 className="mb-6 text-4xl font-bold text-center">{props.header}</h3>
       {props.children}
     </div>
   );
@@ -84,7 +86,7 @@ const AudienceCard = (props: {
   additional?: ReactNode;
 }) => {
   return (
-    <div className="flex flex-col px-10 py-6 bg-white border shadow-xl rounded-xl group hover:shadow-lg">
+    <div className="flex flex-col px-10 py-6 bg-white border shadow-xl rounded-xl">
       <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
         <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">{props.title}</p>
         {props.icon}
