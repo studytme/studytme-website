@@ -1,11 +1,15 @@
 import { BsPeopleFill } from "react-icons/bs";
 import { FaEnvelope, FaTwitch } from "react-icons/fa";
+import Head from "next/head";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import Socials from "../components/socials";
 
 const Sponsors = () => (
   <div className="flex flex-col">
+    <Head>
+      <title>StudyTme - Sponsors</title>
+    </Head>
     <div className="flex flex-col-reverse items-center justify-between w-full sm:flex-row sm:h-headerless-screen">
       <div className="flex flex-col items-center my-10 sm:items-start">
         <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>

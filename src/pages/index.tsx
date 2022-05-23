@@ -1,4 +1,6 @@
 import { FaDiscord, FaTwitch, FaYoutube } from "react-icons/fa";
+import { ReactNode } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import Socials from "../components/socials";
 import type { NextPage } from "next";
@@ -6,6 +8,9 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <div className="flex-grow">
+      <Head>
+        <title>StudyTme - Home</title>
+      </Head>
       <div className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
         <div className="max-h-screen ">
           <img
@@ -29,68 +34,98 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="py-10">
-        <div className="py-5">
-          <h1 className="font-serif text-2xl italic md:text-3xl">About Us</h1>
-        </div>
-        <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-3">
-          <div className="flex flex-col items-end col-span-1">
-            <h1 className="w-full text-lg font-bold md:text-xl md:mb-5">Coworking Live</h1>
-            <p className="font-apple-system">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-            <div className="flex justify-center">
-              <button className="items-center px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
-                <div className="flex items-center justify-center">
+      <div className="py-5">
+        <div className="flex flex-col items-center justify-start 2xl:flex-row">
+          <AboutCard
+            title="Coworking Live"
+            button={
+              <Link href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g" passHref>
+                <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
                   <FaTwitch className="mr-2" />
-
-                  <Link href="https://www.twitch.tv/studytme/profile" passHref>
-                    <a>Twitch</a>
+                  <a>Twitch</a>
+                </button>
+              </Link>
+            }
+            content={
+              <>
+                <p>
+                  This is where you will find me live
+                  <span className="font-bold"> 5 days a week! </span>
+                  You can check out my
+                  <span className="font-bold"> stream schedule </span>
+                  <Link href="https://www.twitch.tv/studytme/schedule" passHref>
+                    <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
+                      &nbsp;here
+                    </span>
                   </Link>
-                </div>
-              </button>
-            </div>
-          </div>
+                  .
+                </p>
+                <p>
+                  By following my channel, you will be able to{" "}
+                  <span className="font-bold">interact with the community </span>
+                  and join in on the fun during our breaks.
+                </p>
+                <p>
+                  Being productive with us will{" "}
+                  <span className="font-bold">get you compensated! </span>
+                  The more you watch, the more pomo-points you will get. They can be spent on my
+                  store (hyperlink this to the store?) for some cool rewards.
+                </p>
+              </>
+            }
+          />
 
-          <div className="flex flex-col items-end col-span-1">
-            <h1 className="w-full text-lg font-bold md:text-xl md:mb-5">An Ordinary Life</h1>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-            <div className="flex justify-center">
-              <button className="px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
-                <div className="flex items-center justify-center">
+          <AboutCard
+            title="An Ordinary Life"
+            button={
+              <Link href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g" passHref>
+                <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
                   <FaYoutube className="mr-2" />
+                  <a>YouTube</a>
+                </button>
+              </Link>
+            }
+            content={
+              <>
+                <p>
+                  Hello there I&apos;m a text that will be replaced in the future with the real
+                  content.
+                </p>
+              </>
+            }
+          />
 
-                  <Link href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g" passHref>
-                    <a>YouTube</a>
-                  </Link>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-end col-span-1">
-            <h1 className="w-full text-lg font-bold md:text-xl md:mb-5">Online Community</h1>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-            <div className="flex justify-center">
-              <button className="items-center px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
-                <div className="flex items-center justify-center">
+          <AboutCard
+            title="Online Community"
+            button={
+              <Link href="https://www.discord.gg/ceogang" passHref>
+                <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
                   <FaDiscord className="mr-2" />
-                  <span>
-                    <Link href="https://www.discord.gg/ceogang" passHref>
-                      <a>Discord</a>
-                    </Link>
-                  </span>
-                </div>
-              </button>
-            </div>
-          </div>
+                  <a>Discord</a>
+                </button>
+              </Link>
+            }
+            content={
+              <>
+                <p>
+                  The CEOgang is an{" "}
+                  <span className="font-bold">Official Discord Partner Server</span>.
+                </p>
+                <p>
+                  By joining the server, you will be able to directly interact with other viewers
+                  and myself included!
+                </p>
+                <p>
+                  You will find study rooms where people are regularly joining to work together, you
+                  might be alone in your room but not when it&apos;s time to focus!
+                </p>
+                <p>
+                  Checking on the discord regularly will also give you the opportunity to join in on
+                  leisurely activities like gaming nights or community organized events.
+                </p>
+              </>
+            }
+          />
         </div>
       </div>
 
@@ -140,6 +175,16 @@ const Home: NextPage = () => {
           </button>
         </div>
       </div>
+    </div>
+  );
+};
+
+const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode }) => {
+  return (
+    <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 bg-slate-100 2xl:even:self-start">
+      <h1 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h1>
+      <div className="space-y-4">{props.content}</div>
+      <div className="self-end pt-2">{props.button}</div>
     </div>
   );
 };

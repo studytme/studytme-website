@@ -1,9 +1,13 @@
 import { HiQuestionMarkCircle } from "react-icons/hi";
 import { ReactNode } from "react";
+import Head from "next/head";
 
 export default function About() {
   return (
     <div className="pt-8">
+      <Head>
+        <title>StudyTme - About</title>
+      </Head>
       <h2 className="font-serif text-2xl italic lg:text-3xl">Why, how, who, where?</h2>
       <h3>The answers to the most asked questions</h3>
 
