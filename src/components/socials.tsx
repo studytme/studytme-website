@@ -1,5 +1,5 @@
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaDiscord, FaLinkedinIn } from "react-icons/fa";
 import React from "react";
 
 const Socials = () => (
@@ -24,6 +24,9 @@ const Socials = () => (
       className="text-gray-800 hover:text-twitch-purple"
     >
       <AiFillYoutube className="w-6 h-6" />
+    </a>
+    <a href="https://discord.gg/ceogang" className="text-gray-800 hover:text-twitch-purple">
+      <FaDiscord className="w-6 h-6" />
     </a>
   </div>
 );
