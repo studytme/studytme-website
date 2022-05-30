@@ -129,12 +129,16 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="my-10">
-        <div className="my-5 text-center">
-          <h1 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h1>
-          <p className="text-sm italic font-medium text-black ">Personally ideated by G</p>
-        </div>
-        <div className="grid grid-cols-2 md:mx-24 md:grid-cols-4">
+      <div className="flex flex-col items-center my-24 text-center">
+        {/* <h1 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h1> */}
+        <img
+          className="w-full sm:w-3/4 2xl:w-1/2"
+          src="/images/merch-banner-gold.png"
+          alt="merch banner"
+        />
+        <p className="text-sm italic font-medium text-slate-400 ">Personally ideated by G</p>
+
+        <div className="grid grid-cols-2 mt-8 md:grid-cols-4">
           <div className="mx-2">
             <img
               className="rounded-lg fill-current"
