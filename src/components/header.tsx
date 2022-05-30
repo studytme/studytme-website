@@ -1,49 +1,98 @@
+import { BsCart4 } from "react-icons/bs";
+import { HiChevronDown } from "react-icons/hi";
+import { Menu, Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
 import Link from "next/link";
-import React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
-const Header = () => (
-  <div className="items-center mx-8 lg:mx-24">
-    <header className="pt-6 border-b border-gray-100 md:py-6">
-      <div className="flex flex-col md:justify-between md:items-center md:flex-row">
-        <div className="flex justify-start basis-1/3 justify-self-start">
-          <h1 className="mb-4 text-3xl font-black text-[#612DFF] md:mb-0">
-            <Link href="/">STUDYTME</Link>
-          </h1>
-        </div>
-        <div className="flex md:justify-center basis-1/3">
-          <ul className="md:items-center md:flex">
-            <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
-              <Link href="/faq">FAQ</Link>
-            </li>
+const Header = () => {
+  return (
+    <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 pt-6 bg-white border-b border-gray-200 h-header">
+      <h1 className="text-3xl font-black transition duration-500 text-twitch-purple hover:underline underline-offset-2 hover:animate-pulse">
+        <Link href="/" passHref>
+          <a>STUDYTME</a>
+        </Link>
+      </h1>
 
-            <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
-              <Link href="/sponsors">Sponsors</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="flex md:justify-end basis-1/3 ">
-          <button className=" px-4 py-2  font-semibold text-[#612DFF] bg-transparent  rounded hover:text-[#b8a1ff] ">
-            <div className="">
-              <span>
-                <Link href="https://studytme.com/merch/" passHref>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    className="bi bi-cart4"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                  </svg>
-                </Link>
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
+      <ul className="hidden sm:flex">
+        <li className="ml-6 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+          <Link href="/" passHref>
+            <a>Home</a>
+          </Link>
+        </li>
+        <li className="ml-6 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+          <Link href="/faq" passHref>
+            <a>FAQ</a>
+          </Link>
+        </li>
+        <li className="ml-6 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+          <Link href="/sponsors" passHref>
+            <a>Sponsors</a>
+          </Link>
+        </li>
+      </ul>
+      <NavigationMenu />
+
+      <Link href="https://studytme-shop.fourthwall.com/cart" passHref>
+        <button>
+          <BsCart4 className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover" />
+        </button>
+      </Link>
     </header>
-  </div>
-);
+  );
+};
+
+const NavigationMenu = () => {
+  const [page, setPage] = useState("Menu");
+  const router = useRouter();
+
+  useEffect(() => {
+    const current = window.location.pathname.slice(1);
+    setPage(current.length > 0 ? current : "Home");
+  }, [router.pathname]);
+
+  return (
+    <div className="visible sm:hidden">
+      <Menu as="div" className="relative inline-block text-left">
+        <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-500 border border-gray-500 rounded-md hover:bg-opacity-30">
+          <p className="capitalize">{page}</p>
+          <HiChevronDown
+            className="w-5 h-5 ml-2 text-violet-200 hover:text-violet-100"
+            aria-hidden="true"
+          />
+        </Menu.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="absolute right-0 w-32 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div className="px-2 py-2 ">
+              <Menu.Item>
+                <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+                  <Link href="/">Home</Link>
+                </div>
+              </Menu.Item>
+              <Menu.Item>
+                <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+                  <Link href="/faq">FAQ</Link>
+                </div>
+              </Menu.Item>
+              <Menu.Item>
+                <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+                  <Link href="/sponsors">Sponsors</Link>
+                </div>
+              </Menu.Item>
+            </div>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    </div>
+  );
+};
 
 export default Header;

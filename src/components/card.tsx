@@ -22,9 +22,8 @@ const Card = (title, value, logo, sub) => (
           <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
         </svg>
       </div>
-      <h5 className="text-5xl font-bold text-[#612DFF]">77k+</h5>
+      <h5 className="text-5xl font-bold text-twitch-purple">77k+</h5>
     </div>
   </div>
 );
-
 export default Card;

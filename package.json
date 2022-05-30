@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.2",
+    "firebase": "^9.8.1",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",

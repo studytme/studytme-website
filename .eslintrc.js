@@ -55,6 +55,7 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
+    "@next/next/no-img-element": 0,
   },
   plugins: ["sort-imports-es6-autofix"],
   settings: {

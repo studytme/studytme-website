@@ -1,8 +1,5 @@
-import Footer from "../components/footer";
-import Header2 from "../components/header";
-import Image from "next/image";
-import Link from "next/link";
-
-const Test = () => <div className=""></div>;
+const Test = () => {
+  return <div>haha</div>;
+};
 
 export default Test;

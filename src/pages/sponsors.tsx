@@ -1,198 +1,150 @@
-import Aki from "../images/aki.png";
-import Footer from "../components/footer";
-import Gtransp from "../images/gtransparent.png";
-import Header from "../components/header";
-import Image from "next/image";
-import Key from "../images/keywords.png";
-import Lofi from "../images/lofi.png";
-import Shark from "../images/surfshark.png";
-
+import { BsPeopleFill } from "react-icons/bs";
+import { FaEnvelope, FaTwitch } from "react-icons/fa";
+import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { ReactNode } from "react";
 import Socials from "../components/socials";
 
 const Sponsors = () => (
-  <div className="">
-    <Header />
-    <div className="grid grid-cols-2 mx-10 my-24 lg:mx-60">
-      <div className="col">
+  <div className="flex flex-col">
+    <Head>
+      <title>StudyTme - Sponsors</title>
+    </Head>
+    <div className="flex flex-col-reverse items-center justify-between w-full sm:flex-row sm:h-headerless-screen">
+      <div className="flex flex-col items-center my-10 sm:items-start">
         <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
         <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
-        <h3 className="text-2xl font-bold lg:">About</h3>
-        <p className="lg:text-2xl">
+        <p className="text-center lg:text-2xl sm:text-left">
           Content creator and community manager addicted to productivity
         </p>
-
         <Socials />
-        <button className="px-5 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent border border-[#612DFF] rounded hover:bg-[#612DFF] hover:text-white hover:border-transparent">
-          <div className="flex items-center justify-center">
-            <span>
-              <Link href="mailto:info@studytme.com">Contact Me</Link>
-            </span>
-          </div>
-        </button>
+        <Link href="mailto:info@studytme.com" passHref>
+          <button className="flex items-center px-3 py-2 mt-2 font-semibold border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
+            <FaEnvelope className="mr-2" />
+            Contact Me
+          </button>
+        </Link>
       </div>
-      <div>
-        <Image
-          layout="responsive"
-          width="1000"
-          height="1000"
-          objectFit="cover"
-          className="border-none shadow-lg align-10 middle rounded-3xl"
-          src={Gtransp}
-          alt="StudyTme Giulia Mazza photo"
+      <img
+        className="mt-10 border-none rounded-full sm:w-1/2 w-50vw sm:rounded-3xl "
+        src={"/images/transparentG.png"}
+        alt="StudyTme Giulia Mazza photo"
+      />
+    </div>
+
+    <SponsorSection header="Audience">
+      <div className="flex flex-col w-full gap-6 mb-10 sm:flex-row justify-evenly">
+        <AudienceCard
+          title=" Total Followers"
+          icon={<BsPeopleFill className="w-5 h-5 ml-2" />}
+          main="77k+"
+        />
+        <AudienceCard
+          title="Main Platform"
+          icon={<FaTwitch className="w-5 h-5 ml-2" />}
+          main="Twitch"
+          additional={<p className="italic text-slate-400">Official Partner</p>}
+        />
+        <AudienceCard
+          title="average CCV*"
+          icon={<FaTwitch className="w-5 h-5 ml-2" />}
+          main="551"
+          additional={<p className="italic text-slate-400">*last 30 days</p>}
         />
       </div>
-    </div>
+    </SponsorSection>
 
-    <div>
-      <div className="mx-10 my-24 lg:mx-60">
-        <h3 className="text-2xl font-bold lg:">Audience</h3>
-        <div className="flex flex-wrap justify-center gap-4">
-          <div className="flex">
-            <div className="flex flex-col justify-between w-64 p-8 transition-shadow bg-white shadow-xl rounded-xl group hover:shadow-lg">
-              <div className="grid justify-between grid-cols-2 pt-2 mt-4 border-b-2 border-indigo-100">
-                <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-                  Total Followers
-                </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className=" bi bi-people-fill justify-self-end"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                  <path
-                    fillRule="evenodd"
-                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
-                  />
-                  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                </svg>
-              </div>
-              <h5 className="text-5xl font-bold text-[#612DFF]">77k+</h5>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="justify-between w-64 p-8 transition-shadow bg-white shadow-xl rounded-xl group hover:shadow-lg">
-              <div className="grid justify-between grid-cols-2 pt-2 mt-4 border-b-2 border-indigo-100">
-                <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-                  Main Platform
-                </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-twitch justify-self-end"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z" />
-                  <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
-                </svg>
-              </div>
-              <h5 className="text-5xl font-bold text-[#612DFF]">Twitch</h5>
-              <p className="italic">Official Partner</p>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="justify-between w-64 p-8 transition-shadow bg-white shadow-xl rounded-xl group hover:shadow-lg">
-              <div className="grid justify-between grid-cols-2 pt-2 mt-4 border-b-2 border-indigo-100">
-                <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-                  average CCV*
-                </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-twitch justify-self-end"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z" />
-                  <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
-                </svg>
-              </div>
-              <h5 className="text-5xl font-bold text-[#612DFF]">551</h5>
-              <p className="italic">*last 30 days</p>
-            </div>
-          </div>
-        </div>
+    <SponsorSection header="Previous collaborations">
+      <div className="flex flex-row flex-wrap w-full gap-4 mb-10 sm:gap-6 justify-evenly">
+        <SponsorCard
+          title="Keywords Studio"
+          main={<img className="w-full" src={"/images/keywords.png"} alt="keywords logo" />}
+          link="https://www.keywordsstudios.com/"
+        />
+        <SponsorCard
+          title="Lofi.co"
+          main={<img className="w-full" src={"/images/lofi.png"} alt="lofi logo" />}
+          link="https://lofi.co/"
+        />
+        <SponsorCard
+          title="Akiflow"
+          main={<img className="w-full" src={"/images/aki.png"} alt="akiflow logo" />}
+          link="https://akiflow.com/"
+        />
+        <SponsorCard
+          title="Surfshark VPN"
+          main={<img className="w-10/12" src={"/images/surfshark.png"} alt="surfshark logo" />}
+          link="https://surfshark.com/"
+        />
       </div>
-    </div>
-    <div>
-      <div className="mx-10 my-24 lg:mx-60">
-        <h3 className="text-2xl font-bold lg:">Last Collabs</h3>
-        <div className="grid justify-center grid-cols-2 gap-4 sm:grid-cols-4">
-          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
-            <Image
-              layout="responsive"
-              width="1000"
-              height="1000"
-              objectFit="cover"
-              className="border-none "
-              src={Key}
-              alt="StudyTme Giulia Mazza photo"
-            />
-            <a
-              href="https://www.keywordsstudios.com/"
-              className="font-bold text-center text-gray-500"
-            >
-              Keywords Studio
-            </a>
-          </div>
-          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
-            <Image
-              layout="responsive"
-              width="500"
-              height="500"
-              objectFit="cover"
-              className="border-none "
-              src={Lofi}
-              alt="StudyTme Giulia Mazza photo"
-            />
-            <a href="https://www.lofi.co/" className="font-bold text-center text-gray-500">
-              Lofi.co
-            </a>
-          </div>
-          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
-            <Image
-              layout="responsive"
-              width="500"
-              height="500"
-              objectFit="contain"
-              className="border-none "
-              src={Shark}
-              alt="StudyTme Giulia Mazza photo"
-            />
-            <a
-              href="https://www.keywordsstudios.com/"
-              className="font-bold text-center text-gray-500"
-            >
-              Keywords Studio
-            </a>
-          </div>
-          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
-            <Image
-              layout="responsive"
-              width="1000"
-              height="1000"
-              objectFit="cover"
-              className="border-none "
-              src={Aki}
-              alt="StudyTme Giulia Mazza photo"
-            />
-            <a href="https://akiflow.com/" className="font-bold text-center text-gray-500">
-              Akiflow
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </SponsorSection>
 
-    <Footer />
+    <SponsorSection header="Others about StudyTme">
+      <div className="flex flex-col mb-20">
+        <img src="/images/lifewireLogo.svg" className="h-6 mb-2 sm:mr-1" alt="LifeWire logo" />
+        <Link
+          href={
+            "https://www.lifewire.com/how-giulia-mazza-became-a-must-watch-streaming-star-5272114"
+          }
+          passHref
+        >
+          <button>
+            <h5 className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline">
+              &quot;How Giulia Mazza became a must watch streaming star&quot;
+            </h5>
+          </button>
+        </Link>
+      </div>
+    </SponsorSection>
   </div>
 );
+
+const SponsorSection = (props: { children?: ReactNode; header: string }) => {
+  return (
+    <div className="flex flex-col items-center w-full my-10">
+      <h3 className="mb-6 text-4xl font-bold text-center">{props.header}</h3>
+      {props.children}
+    </div>
+  );
+};
+
+const AudienceCard = (props: {
+  title: string;
+  icon: ReactNode;
+  main: string;
+  additional?: ReactNode;
+}) => {
+  return (
+    <div className="flex flex-col px-10 py-6 bg-white border shadow-xl rounded-xl">
+      <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
+        <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">{props.title}</p>
+        {props.icon}
+      </div>
+      <h5 className="text-5xl font-bold text-twitch-purple">{props.main}</h5>
+      {props.additional}
+    </div>
+  );
+};
+
+const SponsorCard = (props: {
+  title: string;
+  main: ReactNode;
+  link: string;
+  additional?: ReactNode;
+}) => {
+  return (
+    <Link href={props.link} passHref>
+      <div className="flex flex-col items-center px-6 py-4 bg-white border shadow-xl cursor-pointer hover:shadow-2xl w-52 rounded-xl aspect-square hover:border-slate-300">
+        <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
+          <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
+            {props.title}
+          </p>
+        </div>
+        <div className="flex flex-col items-center justify-center h-full">{props.main}</div>
+        {props.additional}
+      </div>
+    </Link>
+  );
+};
 
 export default Sponsors;
