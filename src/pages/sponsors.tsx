@@ -134,15 +134,17 @@ const SponsorCard = (props: {
 }) => {
   return (
     <Link href={props.link} passHref>
-      <div className="flex flex-col items-center px-6 py-4 bg-white border shadow-xl cursor-pointer hover:shadow-2xl w-52 rounded-xl aspect-square hover:border-slate-300">
-        <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
-          <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
-            {props.title}
-          </p>
+      <a target="_blank">
+        <div className="flex flex-col items-center px-6 py-4 bg-white border shadow-xl cursor-pointer hover:shadow-2xl w-52 rounded-xl aspect-square hover:border-slate-300">
+          <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
+            <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
+              {props.title}
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center h-full">{props.main}</div>
+          {props.additional}
         </div>
-        <div className="flex flex-col items-center justify-center h-full">{props.main}</div>
-        {props.additional}
-      </div>
+      </a>
     </Link>
   );
 };
