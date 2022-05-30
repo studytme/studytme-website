@@ -3,25 +3,27 @@ import React from "react";
 
 const Header = () => (
   <div className="items-center mx-8 lg:mx-24">
-    <header className="pt-6 bg-white border-b border-gray-100 md:py-6">
-      <div className="md:justify-between md:items-center md:flex">
-        <h1 className="mb-4 text-3xl font-black text-[#612DFF] md:mb-0">
-          <Link href="/">STUDYTME</Link>
-        </h1>
+    <header className="pt-6 border-b border-gray-100 md:py-6">
+      <div className="flex flex-col md:justify-between md:items-center md:flex-row">
+        <div className="flex justify-start basis-1/3 justify-self-start">
+          <h1 className="mb-4 text-3xl font-black text-[#612DFF] md:mb-0">
+            <Link href="/">STUDYTME</Link>
+          </h1>
+        </div>
+        <div className="flex md:justify-center basis-1/3">
+          <ul className="md:items-center md:flex">
+            <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
+              <Link href="/faq">FAQ</Link>
+            </li>
 
-        <ul className="md:items-center md:flex">
-          <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
-            <Link href="/about">About</Link>
-          </li>
-
-          <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
-            <Link href="/sponsors">Sponsors</Link>
-          </li>
-        </ul>
-
-        <div className="justify-center">
-          <button className="items-center px-4 py-2 mt-5 font-semibold text-[#612DFF] bg-transparent  rounded hover:text-[#b8a1ff] ">
-            <div className="flex items-center justify-center">
+            <li className="text-base font-medium text-gray-500 border-t border-gray-100 md:border-0 md:ml-6 hover:text-gray-900">
+              <Link href="/sponsors">Sponsors</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex md:justify-end basis-1/3 ">
+          <button className=" px-4 py-2  font-semibold text-[#612DFF] bg-transparent  rounded hover:text-[#b8a1ff] ">
+            <div className="">
               <span>
                 <Link href="https://studytme.com/merch/" passHref>
                   <svg

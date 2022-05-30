@@ -1,7 +1,12 @@
+import Aki from "../images/aki.png";
 import Footer from "../components/footer";
 import Gtransp from "../images/gtransparent.png";
 import Header from "../components/header";
 import Image from "next/image";
+import Key from "../images/keywords.png";
+import Lofi from "../images/lofi.png";
+import Shark from "../images/surfshark.png";
+
 import Link from "next/link";
 import React from "react";
 import Socials from "../components/socials";
@@ -112,6 +117,75 @@ const Sponsors = () => (
               <h5 className="text-5xl font-bold text-[#612DFF]">551</h5>
               <p className="italic">*last 30 days</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div className="mx-10 my-24 lg:mx-60">
+        <h3 className="text-2xl font-bold lg:">Last Collabs</h3>
+        <div className="grid justify-center grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
+            <Image
+              layout="responsive"
+              width="1000"
+              height="1000"
+              objectFit="cover"
+              className="border-none "
+              src={Key}
+              alt="StudyTme Giulia Mazza photo"
+            />
+            <a
+              href="https://www.keywordsstudios.com/"
+              className="font-bold text-center text-gray-500"
+            >
+              Keywords Studio
+            </a>
+          </div>
+          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
+            <Image
+              layout="responsive"
+              width="500"
+              height="500"
+              objectFit="cover"
+              className="border-none "
+              src={Lofi}
+              alt="StudyTme Giulia Mazza photo"
+            />
+            <a href="https://www.lofi.co/" className="font-bold text-center text-gray-500">
+              Lofi.co
+            </a>
+          </div>
+          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
+            <Image
+              layout="responsive"
+              width="500"
+              height="500"
+              objectFit="contain"
+              className="border-none "
+              src={Shark}
+              alt="StudyTme Giulia Mazza photo"
+            />
+            <a
+              href="https://www.keywordsstudios.com/"
+              className="font-bold text-center text-gray-500"
+            >
+              Keywords Studio
+            </a>
+          </div>
+          <div className="flex flex-col justify-between gap-4 p-2 bg-white shadow-xl rounded-xl">
+            <Image
+              layout="responsive"
+              width="1000"
+              height="1000"
+              objectFit="cover"
+              className="border-none "
+              src={Aki}
+              alt="StudyTme Giulia Mazza photo"
+            />
+            <a href="https://akiflow.com/" className="font-bold text-center text-gray-500">
+              Akiflow
+            </a>
           </div>
         </div>
       </div>
