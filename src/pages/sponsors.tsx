@@ -54,6 +54,31 @@ const Sponsors = () => (
       </div>
     </SponsorSection>
 
+    <SponsorSection header="Previous collaborations">
+      <div className="flex flex-row flex-wrap w-full gap-4 mb-10 sm:gap-6 justify-evenly">
+        <SponsorCard
+          title="Keywords Studio"
+          main={<img className="w-full" src={"/images/keywords.png"} alt="keywords logo" />}
+          link="https://www.keywordsstudios.com/"
+        />
+        <SponsorCard
+          title="Lofi.co"
+          main={<img className="w-full" src={"/images/lofi.png"} alt="lofi logo" />}
+          link="https://lofi.co/"
+        />
+        <SponsorCard
+          title="Akiflow"
+          main={<img className="w-full" src={"/images/aki.png"} alt="akiflow logo" />}
+          link="https://akiflow.com/"
+        />
+        <SponsorCard
+          title="Surfshark VPN"
+          main={<img className="w-10/12" src={"/images/surfshark.png"} alt="surfshark logo" />}
+          link="https://surfshark.com/"
+        />
+      </div>
+    </SponsorSection>
+
     <SponsorSection header="Others about StudyTme">
       <div className="flex flex-col mb-20">
         <img src="/images/lifewireLogo.svg" className="h-6 mb-2 sm:mr-1" alt="LifeWire logo" />
@@ -98,6 +123,27 @@ const AudienceCard = (props: {
       <h5 className="text-5xl font-bold text-twitch-purple">{props.main}</h5>
       {props.additional}
     </div>
+  );
+};
+
+const SponsorCard = (props: {
+  title: string;
+  main: ReactNode;
+  link: string;
+  additional?: ReactNode;
+}) => {
+  return (
+    <Link href={props.link} passHref>
+      <div className="flex flex-col items-center px-6 py-4 bg-white border shadow-xl cursor-pointer hover:shadow-2xl w-52 rounded-xl aspect-square hover:border-slate-300">
+        <div className="flex items-center justify-between pt-2 pb-1 mb-2 border-b-2 border-indigo-100">
+          <p className="text-sm font-medium tracking-widest text-gray-500 uppercase">
+            {props.title}
+          </p>
+        </div>
+        <div className="flex flex-col items-center justify-center h-full">{props.main}</div>
+        {props.additional}
+      </div>
+    </Link>
   );
 };
 

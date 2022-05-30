@@ -21,8 +21,8 @@ const Header = () => {
           </Link>
         </li>
         <li className="ml-6 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
-          <Link href="/about" passHref>
-            <a>About</a>
+          <Link href="/faq" passHref>
+            <a>FAQ</a>
           </Link>
         </li>
         <li className="ml-6 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
@@ -79,7 +79,7 @@ const NavigationMenu = () => {
               </Menu.Item>
               <Menu.Item>
                 <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
-                  <Link href="/about">About</Link>
+                  <Link href="/faq">FAQ</Link>
                 </div>
               </Menu.Item>
               <Menu.Item>
