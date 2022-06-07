@@ -34,12 +34,12 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="py-5">
-        <div className="flex flex-col items-center justify-start 2xl:flex-row">
+      <div className="py-5 ">
+        <div className="flex flex-col items-center 2xl:flex-row">
           <AboutCard
             title="Coworking Live"
             button={
-              <Link href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g" passHref>
+              <Link href="https://www.twitch.tv/studytme" passHref>
                 <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
                   <FaTwitch className="mr-2" />
                   <a>Twitch</a>
@@ -48,29 +48,37 @@ const Home: NextPage = () => {
             }
             content={
               <>
-                <p>
+                <p className="mb-5">
                   This is where you will find me live
                   <span className="font-bold"> 5 days a week! </span>
                   You can check out my
                   <span className="font-bold"> stream schedule </span>
-                  <Link href="https://www.twitch.tv/studytme/schedule" passHref>
+                  <Link href="https://ibb.co/KbvPJgw" passHref>
                     <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
-                      &nbsp;here
+                      here
                     </span>
                   </Link>
                   .
                 </p>
-                <p>
-                  By following my channel, you will be able to{" "}
-                  <span className="font-bold">interact with the community </span>
-                  and join in on the fun during our breaks.
-                </p>
-                <p>
-                  Being productive with us will{" "}
-                  <span className="font-bold">get you compensated! </span>
-                  The more you watch, the more pomo-points you will get. They can be spent on my
-                  store (hyperlink this to the store?) for some cool rewards.
-                </p>
+                <span className="">Join to:</span>
+                <ul className="ml-5 list-disc">
+                  <li>
+                    check the benefits of co-working{" "}
+                    <Link href="/faq" passHref>
+                      <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
+                        here
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <span className="font-bold text-twitch-purple">Extra Streams</span>:
+                    <ul className="ml-5 list-disc">
+                      <li>learn to code</li>
+                      <li>improve in videogames</li>
+                      <li>career advice</li>
+                    </ul>
+                  </li>
+                </ul>
               </>
             }
           />
@@ -87,10 +95,16 @@ const Home: NextPage = () => {
             }
             content={
               <>
-                <p>
-                  Hello there I&apos;m a text that will be replaced in the future with the real
-                  content.
+                <p className="mb-5">
+                  All of G{"'"}s content on YouTube is focused on recording her journey towards
+                  being a better human.
                 </p>
+                <span>You can find:</span>
+                <ul className="ml-5 list-disc">
+                  <li>vlogs about her messy life</li>
+                  <li>VOD of interviews to important people</li>
+                  <li>music to study/work/relax</li>
+                </ul>
               </>
             }
           />
@@ -107,22 +121,38 @@ const Home: NextPage = () => {
             }
             content={
               <>
-                <p>
+                <p className="mb-5">
                   The CEOgang is an{" "}
                   <span className="font-bold">Official Discord Partner Server</span>.
                 </p>
-                <p>
-                  By joining the server, you will be able to directly interact with other viewers
-                  and myself included!
-                </p>
-                <p>
-                  You will find study rooms where people are regularly joining to work together, you
-                  might be alone in your room but not when it&apos;s time to focus!
-                </p>
-                <p>
-                  Checking on the discord regularly will also give you the opportunity to join in on
-                  leisurely activities like gaming nights or community organized events.
-                </p>
+                <span className="">You will find:</span>
+                <ul className="ml-5 list-disc">
+                  <li>
+                    <span className="font-bold text-twitch-purple">Bookclub</span>: to improve your
+                    knowledge and english skills.
+                    <ul className="ml-5 list-disc">
+                      <li>everyone is welcome</li>
+                      <li>last Sunday of the month</li>
+                      <li>no need to read the book to participate</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-bold text-twitch-purple">Virtual study rooms</span>: to
+                    increase accountability.
+                    <ul className="ml-5 list-disc">
+                      <li>with or without cam, as you wish</li>
+                      <li>24/7</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-bold text-twitch-purple">MasterMinds</span>: relaxed
+                    conversations to help learn better English together.
+                    <ul className="ml-5 list-disc">
+                      <li>doesn&apos;t matter your english level (natives are welcome too)</li>
+                      <li>4 times x 2 days (more info on Discord) </li>
+                    </ul>
+                  </li>
+                </ul>
               </>
             }
           />
@@ -130,11 +160,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="flex flex-col items-center my-24 text-center">
-        <img
-          className="w-full sm:w-3/4 2xl:w-1/2"
-          src="/images/merch-banner-gold.png"
-          alt="merch banner"
-        />
+        <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
         <p className="text-sm italic font-medium text-slate-400 ">Personally ideated by G</p>
 
         <div className="grid grid-cols-2 mt-8 md:grid-cols-4">
@@ -187,7 +213,7 @@ const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode
     <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 bg-slate-100 2xl:even:self-start">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="space-y-4">{props.content}</div>
-      <div className="self-end pt-2">{props.button}</div>
+      <div className="self-center pt-2">{props.button}</div>
     </div>
   );
 };

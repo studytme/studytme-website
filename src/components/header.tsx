@@ -8,7 +8,7 @@ import React, { Fragment, useEffect, useState } from "react";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 pt-6 bg-white border-b border-gray-200 h-header">
-      <h2 className="text-3xl font-black transition duration-500 text-twitch-purple hover:underline underline-offset-2 hover:animate-pulse">
+      <h2 className="text-3xl font-black transition duration-500 text-twitch-purple hover:animate-pulse ">
         <Link href="/" passHref>
           <a>STUDYTME</a>
         </Link>
