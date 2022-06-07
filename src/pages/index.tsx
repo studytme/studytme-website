@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex-grow">
       <Head>
-        <title>StudyTme - Home</title>
+        <title>StudyTme</title>
       </Head>
       <div className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
         <div className="max-h-screen ">
@@ -130,7 +130,6 @@ const Home: NextPage = () => {
       </div>
 
       <div className="flex flex-col items-center my-24 text-center">
-        {/* <h1 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h1> */}
         <img
           className="w-full sm:w-3/4 2xl:w-1/2"
           src="/images/merch-banner-gold.png"
@@ -186,7 +185,7 @@ const Home: NextPage = () => {
 const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode }) => {
   return (
     <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 bg-slate-100 2xl:even:self-start">
-      <h1 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h1>
+      <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="space-y-4">{props.content}</div>
       <div className="self-end pt-2">{props.button}</div>
     </div>
