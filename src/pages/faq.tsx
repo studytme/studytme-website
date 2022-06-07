@@ -11,7 +11,7 @@ export default function About() {
       <h1 className="font-serif text-2xl italic lg:text-3xl">Why, how, who, where?</h1>
       <h3>The answers to the most asked questions</h3>
 
-      <div className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:gap-8">
+      <section className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:gap-8">
         <QuestionBox
           question="How does it work?"
           answer={
@@ -83,7 +83,7 @@ export default function About() {
           listening to your needs. If you are feeling tired, by any means listen to your body
           and reset. The worst thing that can impact our productivity is burning out."
         />
-      </div>
+      </section>
     </div>
   );
 }

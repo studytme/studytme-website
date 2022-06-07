@@ -10,7 +10,7 @@ const Sponsors = () => (
     <Head>
       <title>StudyTme - Sponsors</title>
     </Head>
-    <div className="flex flex-col-reverse items-center justify-between w-full sm:flex-row sm:h-headerless-screen">
+    <section className="flex flex-col-reverse items-center justify-between w-full sm:flex-row sm:h-headerless-screen">
       <div className="flex flex-col items-center my-10 sm:items-start">
         <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
         <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
@@ -30,7 +30,7 @@ const Sponsors = () => (
         src={"/images/transparentG.png"}
         alt="StudyTme Giulia Mazza photo"
       />
-    </div>
+    </section>
 
     <SponsorSection header="Audience">
       <div className="flex flex-col w-full gap-6 mb-10 sm:flex-row justify-evenly">
@@ -101,10 +101,10 @@ const Sponsors = () => (
 
 const SponsorSection = (props: { children?: ReactNode; header: string }) => {
   return (
-    <div className="flex flex-col items-center w-full my-10">
+    <section className="flex flex-col items-center w-full my-10">
       <h3 className="mb-6 text-4xl font-bold text-center">{props.header}</h3>
       {props.children}
-    </div>
+    </section>
   );
 };
 

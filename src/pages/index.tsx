@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>StudyTme</title>
       </Head>
-      <div className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
+      <section className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
         <div className="max-h-screen ">
           <img
             width="1080"
@@ -32,9 +32,9 @@ const Home: NextPage = () => {
             projects.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="py-5 ">
+      <section className="py-5 ">
         <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start">
           <AboutCard
             title="Coworking Live"
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
                   <span className="font-bold"> 5 days a week! </span>
                   You can check out my
                   <span className="font-bold"> stream schedule </span>
-                  <Link href="https://ibb.co/KbvPJgw" passHref>
+                  <Link href="/schedule" passHref>
                     <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
                       here
                     </span>
@@ -157,9 +157,9 @@ const Home: NextPage = () => {
             }
           />
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-col items-center my-24 text-center">
+      <section className="flex flex-col items-center my-24 text-center">
         <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
         <p className="text-sm italic font-medium text-slate-400 ">Personally ideated by G</p>
 
@@ -197,13 +197,13 @@ const Home: NextPage = () => {
         <div className="flex justify-center my-5">
           <button className="items-center px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
             <div className="flex items-center justify-center">
-              <Link href="https://studytme-shop.fourthwall.com/collections/all" passHref>
+              <Link href="https://merch.studytme.com/" passHref>
                 <a>Check the merch</a>
               </Link>
             </div>
           </button>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
