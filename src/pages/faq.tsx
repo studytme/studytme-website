@@ -8,7 +8,7 @@ export default function About() {
       <Head>
         <title>StudyTme - About</title>
       </Head>
-      <h2 className="font-serif text-2xl italic lg:text-3xl">Why, how, who, where?</h2>
+      <h1 className="font-serif text-2xl italic lg:text-3xl">Why, how, who, where?</h1>
       <h3>The answers to the most asked questions</h3>
 
       <div className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:gap-8">
