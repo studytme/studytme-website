@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="py-5 ">
-        <div className="flex flex-col items-center 2xl:flex-row">
+        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start">
           <AboutCard
             title="Coworking Live"
             button={
@@ -210,7 +210,7 @@ const Home: NextPage = () => {
 
 const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode }) => {
   return (
-    <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 bg-slate-100 2xl:even:self-start">
+    <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 text-slate-500 bg-slate-100">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="space-y-4">{props.content}</div>
       <div className="self-center pt-2">{props.button}</div>
