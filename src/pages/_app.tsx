@@ -3,6 +3,7 @@ import { Layout } from "../components/Layout";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { useEffect } from "react";
+import Head from "next/head";
 import type { AppProps } from "next/app";
 
 const firebaseConfig = {
@@ -26,6 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Layout>
+      <Head>
+        <title>StudyTme</title>
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );

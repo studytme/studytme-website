@@ -9,9 +9,9 @@ const Home: NextPage = () => {
   return (
     <div className="flex-grow">
       <Head>
-        <title>StudyTme - Home</title>
+        <title>StudyTme</title>
       </Head>
-      <div className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
+      <section className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
         <div className="max-h-screen ">
           <img
             width="1080"
@@ -32,10 +32,10 @@ const Home: NextPage = () => {
             projects.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className="py-5 ">
-        <div className="flex flex-col items-center 2xl:flex-row">
+      <section className="py-5 ">
+        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start">
           <AboutCard
             title="Coworking Live"
             button={
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
                   <span className="font-bold"> 5 days a week! </span>
                   You can check out my
                   <span className="font-bold"> stream schedule </span>
-                  <Link href="https://ibb.co/KbvPJgw" passHref>
+                  <Link href="/schedule" passHref>
                     <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
                       here
                     </span>
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
                     <span className="font-bold text-twitch-purple">MasterMinds</span>: relaxed
                     conversations to help learn better English together.
                     <ul className="ml-5 list-disc">
-                      <li>doesn{"'"}t matter your english level (natives are welcome too)</li>
+                      <li>doesn&apos;t matter your english level (natives are welcome too)</li>
                       <li>4 times x 2 days (more info on Discord) </li>
                     </ul>
                   </li>
@@ -157,9 +157,9 @@ const Home: NextPage = () => {
             }
           />
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-col items-center my-24 text-center">
+      <section className="flex flex-col items-center my-24 text-center">
         <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
         <p className="text-sm italic font-medium text-slate-400 ">Personally ideated by G</p>
 
@@ -197,21 +197,21 @@ const Home: NextPage = () => {
         <div className="flex justify-center my-5">
           <button className="items-center px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
             <div className="flex items-center justify-center">
-              <Link href="https://studytme-shop.fourthwall.com/collections/all" passHref>
+              <Link href="https://merch.studytme.com/" passHref>
                 <a>Check the merch</a>
               </Link>
             </div>
           </button>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
 
 const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode }) => {
   return (
-    <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 bg-slate-100 2xl:even:self-start">
-      <h1 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h1>
+    <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 text-slate-500 bg-slate-100">
+      <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="space-y-4">{props.content}</div>
       <div className="self-center pt-2">{props.button}</div>
     </div>
