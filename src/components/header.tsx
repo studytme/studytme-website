@@ -35,7 +35,10 @@ const Header = () => {
 
       <Link href="https://studytme-shop.fourthwall.com/cart" passHref>
         <button>
-          <BsCart4 className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover" />
+          <BsCart4
+            className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover"
+            title="Cart"
+          />
         </button>
       </Link>
     </header>
