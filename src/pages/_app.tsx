@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Layout>
       <Head>
         <title>StudyTme</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />
     </Layout>
