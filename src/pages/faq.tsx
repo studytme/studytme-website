@@ -1,6 +1,7 @@
 import { HiQuestionMarkCircle } from "react-icons/hi";
 import { ReactNode } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -21,12 +22,9 @@ export default function About() {
               discuss different topics, motivates or just simply entertain them with mini games.
               This is a famous technique that G did not invent. It is called the Pomodoro technique.
               For more info, check this website: &nbsp;
-              <a
-                href="https://todoist.com/productivity-methods/pomodoro-technique"
-                className="text-twitch-purple hover:italic"
-              >
-                The Pomodoro Technique
-              </a>
+              <Link href="https://todoist.com/productivity-methods/pomodoro-technique">
+                <a className="text-twitch-purple hover:italic">The Pomodoro Technique</a>
+              </Link>
             </>
           }
         />
