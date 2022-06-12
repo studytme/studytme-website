@@ -2,10 +2,9 @@ import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
-      <Head lang="en">
+    <Html lang="en">
+      <Head>
         {/* General */}
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content="Home of the StudyTme community. Follow Giulia on Twitch, Youtube and TikTok. Also join us on Discord."

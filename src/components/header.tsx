@@ -33,7 +33,7 @@ const Header = () => {
       </ul>
       <NavigationMenu />
 
-      <Link href="https://merch.studytme.com/" passHref>
+      <Link href="https://merch.studytme.com" passHref>
         <button>
           <BsCart4
             className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover"
