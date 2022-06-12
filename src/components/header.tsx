@@ -8,11 +8,11 @@ import React, { Fragment, useEffect, useState } from "react";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 pt-6 bg-white border-b border-gray-200 h-header">
-      <h1 className="text-3xl font-black transition duration-500 text-twitch-purple hover:animate-pulse ">
+      <h2 className="text-3xl font-black transition duration-500 text-twitch-purple hover:animate-pulse ">
         <Link href="/" passHref>
           <a>STUDYTME</a>
         </Link>
-      </h1>
+      </h2>
 
       <ul className="hidden sm:flex">
         <li className="ml-6 text-base font-medium text-gray-500 border-gray-100 hover:text-gray-900">
@@ -35,7 +35,10 @@ const Header = () => {
 
       <Link href="https://merch.studytme.com" passHref>
         <button>
-          <BsCart4 className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover" />
+          <BsCart4
+            className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover"
+            title="Cart"
+          />
         </button>
       </Link>
     </header>

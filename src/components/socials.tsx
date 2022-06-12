@@ -1,5 +1,6 @@
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaDiscord, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 import React from "react";
 
 const Socials = () => (
