@@ -25,11 +25,14 @@ const Home: NextPage = () => {
           <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
           <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
           <Socials />
-          <p className="lg:text-2xl md:mt-12"> Giulia is the founder of the CEOgang.</p>
-          <p className="lg:text-2xl">
-            She has now finished her studies in Data Science and Digital marketing but she keeps
-            leading the community towards more productivity and mental health while working on her
-            projects.
+          <p className="mb-5 lg:text-2xl">
+            Giulia (or G for short) is the founder of the CEO Gang, a Twitch and Discord community
+            focused on productivity and mental wellbeing.
+          </p>
+          <p className="text-gray-500 lg:text-xl">
+            Giulia created StudyTme when she was studying Data Science and Digital Marketing at
+            university, but since graduating she{"'"}s expanded the channel to all aspects of
+            working and productivity, while developing the community itself.
           </p>
         </div>
       </div>
@@ -63,19 +66,22 @@ const Home: NextPage = () => {
                 <span className="">Join to:</span>
                 <ul className="ml-5 list-disc">
                   <li>
-                    check the benefits of co-working{" "}
+                    Not sure what co-working live is?{" "}
                     <Link href="/faq" passHref>
                       <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
-                        here
+                        Find out more
                       </span>
                     </Link>
                   </li>
                   <li>
-                    <span className="font-bold text-twitch-purple">Extra Streams</span>:
+                    <span className="font-bold text-twitch-purple">
+                      You{"'"}ll also find extra streams where we:
+                    </span>
+                    :
                     <ul className="ml-5 list-disc">
                       <li>learn to code</li>
-                      <li>improve in videogames</li>
-                      <li>career advice</li>
+                      <li>improve in competitive videogames</li>
+                      <li>get career advice/work on our CVs</li>
                     </ul>
                   </li>
                 </ul>
@@ -96,14 +102,13 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  All of G{"'"}s content on YouTube is focused on recording her journey towards
-                  being a better human.
+                  Want to follow G on her quest to become a better human being?
                 </p>
-                <span>You can find:</span>
+                <span>Check out her YouTube channel for:</span>
                 <ul className="ml-5 list-disc">
                   <li>vlogs about her messy life</li>
-                  <li>VOD of interviews to important people</li>
-                  <li>music to study/work/relax</li>
+                  <li>interviews with guests on stream</li>
+                  <li>playlists to study/work/relax to</li>
                 </ul>
               </>
             }
@@ -128,8 +133,8 @@ const Home: NextPage = () => {
                 <span className="">You will find:</span>
                 <ul className="ml-5 list-disc">
                   <li>
-                    <span className="font-bold text-twitch-purple">Bookclub</span>: to improve your
-                    knowledge and english skills.
+                    <span className="font-bold text-twitch-purple">Bookclub</span>: talk about
+                    interesting books and improve your English skills.
                     <ul className="ml-5 list-disc">
                       <li>everyone is welcome</li>
                       <li>last Sunday of the month</li>
@@ -138,18 +143,21 @@ const Home: NextPage = () => {
                   </li>
                   <li>
                     <span className="font-bold text-twitch-purple">Virtual study rooms</span>: to
-                    increase accountability.
+                    stay accountable and study/work alongside other people
                     <ul className="ml-5 list-disc">
-                      <li>with or without cam, as you wish</li>
-                      <li>24/7</li>
+                      <li>with or without cam on, as you wish</li>
+                      <li>24/7 co-working, we have members in almost every country</li>
+                      <li>friendly faces and a well moderated community</li>
                     </ul>
                   </li>
                   <li>
-                    <span className="font-bold text-twitch-purple">MasterMinds</span>: relaxed
-                    conversations to help learn better English together.
+                    <span className="font-bold text-twitch-purple">MasterMinds</span>: master the
+                    English language in a relaxed environment
                     <ul className="ml-5 list-disc">
-                      <li>doesn{"'"}t matter your english level (natives are welcome too)</li>
-                      <li>4 times x 2 days (more info on Discord) </li>
+                      <li>
+                        open to everyone at any level of English (people join to learn and to help)
+                      </li>
+                      <li>4 sessions across 2 days (more info on Discord) </li>
                     </ul>
                   </li>
                 </ul>
@@ -161,7 +169,7 @@ const Home: NextPage = () => {
 
       <div className="flex flex-col items-center my-24 text-center">
         <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
-        <p className="text-sm italic font-medium text-slate-400 ">Personally ideated by G</p>
+        <p className="text-sm italic font-medium text-slate-400 ">Designed by Giulia</p>
 
         <div className="grid grid-cols-2 mt-8 md:grid-cols-4">
           <div className="mx-2">
@@ -197,7 +205,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center my-5">
           <button className="items-center px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
             <div className="flex items-center justify-center">
-              <Link href="https://studytme-shop.fourthwall.com/collections/all" passHref>
+              <Link href="https://merch.studytme.com" passHref>
                 <a>Check the merch</a>
               </Link>
             </div>
@@ -210,7 +218,7 @@ const Home: NextPage = () => {
 
 const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode }) => {
   return (
-    <div className="flex flex-col p-4 my-4 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 bg-slate-100 2xl:even:self-start">
+    <div className="flex flex-col p-4 my-4 bg-gray-100 rounded-lg sm:w-3/4 2xl:mx-2 odd:self-start even:self-end text-slate-500 2xl:even:self-start">
       <h1 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h1>
       <div className="space-y-4">{props.content}</div>
       <div className="self-center pt-2">{props.button}</div>

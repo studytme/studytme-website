@@ -79,7 +79,7 @@ const Sponsors = () => (
       </div>
     </SponsorSection>
 
-    <SponsorSection header="Others about StudyTme">
+    <SponsorSection header="StudyTme in the media">
       <div className="flex flex-col mb-20">
         <img src="/images/lifewireLogo.svg" className="h-6 mb-2 sm:mr-1" alt="LifeWire logo" />
         <Link
