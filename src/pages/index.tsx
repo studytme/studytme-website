@@ -13,13 +13,10 @@ const Home: NextPage = () => {
       </Head>
       <section className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
         <div className="max-h-screen ">
-          <img
-            width="1080"
-            height="1920"
-            className="border-none rounded-3xl"
-            src="/images/360g.gif"
-            alt="StudyTme Giulia Mazza photo"
-          />
+          <video className="rounded-3xl" autoPlay muted loop>
+            <source src="/images/360g.mp4" type="video/mp4" />
+            Spinning G
+          </video>
         </div>
         <div className="col-span-2">
           <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
