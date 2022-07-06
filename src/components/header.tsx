@@ -34,11 +34,8 @@ const Header = () => {
       <NavigationMenu />
 
       <Link href="https://merch.studytme.com" passHref>
-        <button>
-          <BsCart4
-            className="w-6 h-6 hover:cursor-pointer fill-twitch-purple hover:fill-twitch-purple-hover"
-            title="Cart"
-          />
+        <button className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple hover:fill-twitch-purple-hover">
+          <h1 className="hover:cursor-pointer">Merch</h1>
         </button>
       </Link>
     </header>
