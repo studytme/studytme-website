@@ -35,7 +35,7 @@ export default function Document() {
         <meta name="twitter:image" content="https://studytme.com/images/transparentG.png" />
         <meta name="twitter:image:alt" content="Photo of StudyTme G" />
       </Head>
-      <body>
+      <body className="bg-slate-50">
         <Main />
         <NextScript />
       </body>

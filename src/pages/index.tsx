@@ -24,7 +24,7 @@ const Home: NextPage = () => {
           <Socials />
           <p className="mb-5 lg:text-2xl">
             Giulia (or G for short) is the founder of the CEO Gang, a Twitch and Discord community
-            focused on productivity and mental wellbeing.
+            focused on productivity and mental well-being.
           </p>
           <p className="text-gray-500 lg:text-xl">
             Giulia created StudyTme when she was studying Data Science and Digital Marketing at
@@ -33,9 +33,9 @@ const Home: NextPage = () => {
           </p>
         </div>
       </section>
-
+      {/* TODO: Try to get socials cars to line up at the bottom */}
       <section className="py-5 ">
-        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start">
+        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start border-2">
           <AboutCard
             title="Twitch"
             image={
