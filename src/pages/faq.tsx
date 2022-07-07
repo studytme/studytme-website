@@ -160,7 +160,7 @@ const QuestionBox = (props: {
   image: ReactNode;
 }) => {
   return (
-    <div className={"p-5 shadow-lg rounded-lg" + props.className}>
+    <div className={"p-5 shadow-lg rounded-lg bg-white " + props.className}>
       <div className="flex items-center gap-4 pb-4 mb-4 border-b">
         <div>{props.image}</div>
         <h3 className="font-semibold text-twitch-purple sm:text-lg md:text-xl">{props.question}</h3>

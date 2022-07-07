@@ -218,7 +218,7 @@ const AboutCard = (props: {
   finaltext: string;
 }) => {
   return (
-    <div className="flex flex-col p-4 my-4 rounded-lg shadow-lg sm:w-3/4 2xl:mx-2 text-slate-500">
+    <div className="flex flex-col p-4 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 2xl:mx-2 text-slate-500 ">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="w-full mb-3">{props.image}</div>
       <hr className="self-center w-1/4 border-gray-400 border-1" />

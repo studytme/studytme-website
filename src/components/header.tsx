@@ -33,11 +33,11 @@ const Header = () => {
       </ul>
       <NavigationMenu />
 
-      <Link href="https://merch.studytme.com" passHref>
-        <button className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple hover:fill-twitch-purple-hover">
-          <h1 className="hover:cursor-pointer">Merch</h1>
-        </button>
-      </Link>
+      <button className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple hover:fill-twitch-purple-hover">
+        <Link href="https://merch.studytme.com" passHref>
+          <h1 className="hover:cursor-pointer ">Merch</h1>
+        </Link>
+      </button>
     </header>
   );
 };
