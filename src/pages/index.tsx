@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       </section>
 
       <section className="py-5 ">
-        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-stretch">
+        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-stretch 2xl:space-x-8">
           <AboutCard
             title="Twitch"
             image={
@@ -72,10 +72,10 @@ const Home: NextPage = () => {
             emote2={<p>✅</p>}
             emote3={<p>😞</p>}
             emote4={<p>💪</p>}
-            text1={"Rhythm"}
-            text2={"To-do lists"}
-            text3={"Less alone"}
-            text4={"Motivation"}
+            text1={<span className="whitespace-nowrap">Rhythm</span>}
+            text2={<span className="whitespace-nowrap">To-do lists</span>}
+            text3={<span className="whitespace-nowrap">Less alone</span>}
+            text4={<span className="whitespace-nowrap">Motivation</span>}
             finaltext={"and more..."}
           />
           <AboutCard
@@ -107,10 +107,10 @@ const Home: NextPage = () => {
             emote2={<p>📚</p>}
             emote3={<p>💬</p>}
             emote4={<p>🎬</p>}
-            text1={"Vlogs"}
-            text2={"Book reviews"}
-            text3={"Interviews"}
-            text4={"VODs"}
+            text1={<span className="whitespace-nowrap">Vlogs</span>}
+            text2={<span className="whitespace-nowrap">Book reviews</span>}
+            text3={<span className="whitespace-nowrap">Interviews</span>}
+            text4={<span className="whitespace-nowrap">VODs</span>}
             finaltext={"and more..."}
           />
           <AboutCard
@@ -143,10 +143,10 @@ const Home: NextPage = () => {
             emote2={<p>🤗</p>}
             emote3={<p>📚</p>}
             emote4={<p>🧠</p>}
-            text1={"Study rooms"}
-            text2={"Community"}
-            text3={"Bookclub"}
-            text4={"Masterminds"}
+            text1={<span className="whitespace-nowrap">Study rooms</span>}
+            text2={<span className="whitespace-nowrap">Community</span>}
+            text3={<span className="whitespace-nowrap">Bookclub</span>}
+            text4={<span className="whitespace-nowrap">Masterminds</span>}
             finaltext={"and more..."}
           />
         </div>
@@ -211,14 +211,14 @@ const AboutCard = (props: {
   emote2: ReactNode;
   emote3: ReactNode;
   emote4: ReactNode;
-  text1: string;
-  text2: string;
-  text3: string;
-  text4: string;
+  text1: ReactNode;
+  text2: ReactNode;
+  text3: ReactNode;
+  text4: ReactNode;
   finaltext: string;
 }) => {
   return (
-    <div className="flex flex-col px-4 py-6 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 2xl:mx-2 text-slate-500 ">
+    <div className="flex flex-col px-4 py-6 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 text-slate-500 ">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="w-full mb-3">{props.image}</div>
       <hr className="self-center w-1/4 border-gray-400 border-1" />

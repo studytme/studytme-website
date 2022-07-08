@@ -76,11 +76,16 @@ const Sponsors = () => (
           main={<img className="w-10/12" src={"/images/surfshark.png"} alt="surfshark logo" />}
           link="https://surfshark.com/"
         />
+        <SponsorCard
+          title="Notion"
+          main={<img className="w-full" src={"/images/notion-logo.svg"} alt="surfshark logo" />}
+          link="https://www.notion.so/"
+        />
       </div>
     </SponsorSection>
 
     <SponsorSection header="StudyTme in the media">
-      <div className="flex flex-col mb-20">
+      <div className="flex flex-col mb-10">
         <img src="/images/lifewireLogo.svg" className="h-6 mb-2 sm:mr-1" alt="LifeWire logo" />
         <Link
           href={
@@ -88,11 +93,30 @@ const Sponsors = () => (
           }
           passHref
         >
-          <button>
-            <h5 className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline">
-              &quot;How Giulia Mazza became a must watch streaming star&quot;
-            </h5>
-          </button>
+          <a
+            target={"_blank"}
+            className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline"
+          >
+            &quot;How Giulia Mazza became a must watch streaming star&quot;
+          </a>
+        </Link>
+      </div>
+      <div className="flex flex-col items-center mb-20">
+        <img
+          src="/images/study-international.svg"
+          className="w-auto h-10 p-2 mb-2 sm:mr-1 bg-[#172670]"
+          alt="Study International logo"
+        />
+        <Link
+          href={"https://studyinternational.com/news/best-discord-servers-for-students/"}
+          passHref
+        >
+          <a
+            target={"_blank"}
+            className="text-xl font-bold text-twitch-purple hover:text-twitch-purple-hover hover:underline"
+          >
+            &quot;Top 5 Discord servers for int&apos;l students&quot;
+          </a>
         </Link>
       </div>
     </SponsorSection>
