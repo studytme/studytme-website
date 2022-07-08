@@ -11,10 +11,60 @@ export default function About() {
       </Head>
       <h1 className="font-serif text-2xl italic lg:text-3xl">Why, how, who, where?</h1>
       <h3>The answers to the most asked questions</h3>
+      <ul className="grid self-center grid-cols-2 my-5">
+        <li className="mx-4">
+          <div className="flex items-center gap-4">
+            <span className="font-size:100px">&#10067;</span>
+            <h3 className="underline sm:text-lg md:text-xl hover:text-twitch-purple hover:font-semibold">
+              <a href="#how-does-it-work">How does it work?</a>
+            </h3>
+          </div>
+        </li>
+        <li className="mx-4">
+          <div className="flex items-center gap-4 ">
+            <span className="font-size:100px">&#128522;</span>
+            <h3 className="underline sm:text-lg md:text-xl hover:text-twitch-purple hover:font-semibold">
+              <a href="#who-does-it-work-for">Who does it work for?</a>
+            </h3>
+          </div>
+        </li>
+        <li className="mx-4">
+          <div className="flex items-center gap-4 ">
+            <span className="font-size:100px">&#129351;</span>
+            <h3 className="underline sm:text-lg md:text-xl hover:text-twitch-purple hover:font-semibold">
+              <a href="#why-does-it-work">Why does it work?</a>
+            </h3>
+          </div>
+        </li>
+        <li className="mx-6">
+          <div className="flex items-center gap-4">
+            <span className="font-size:100px">&#128640;</span>
+            <h3 className="underline sm:text-lg md:text-xl hover:text-twitch-purple hover:font-semibold">
+              <a href="#how-did-it-start">How did it start?</a>
+            </h3>
+          </div>
+        </li>
+        <li className="mx-4">
+          <div className="flex items-center gap-4 ">
+            <span className="font-size:100px">&#128581;</span>
+            <h3 className="underline sm:text-lg md:text-xl hover:text-twitch-purple hover:font-semibold">
+              <a href="#difference-hustle">How we differ from the hustle culture?</a>
+            </h3>
+          </div>
+        </li>
+        <li className="mx-4">
+          <div className="flex items-center gap-4 ">
+            <span className="font-size:100px">&#128188;</span>
+            <h3 className="underline sm:text-lg md:text-xl hover:text-twitch-purple hover:font-semibold">
+              <a href="#ceogang-meaning">What does CEOgang mean?</a>
+            </h3>
+          </div>
+        </li>
+      </ul>
 
       <section className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 md:gap-8">
         <QuestionBox
-          question="How does it work?"
+          question={<a id="how-does-it-work">How does it work?</a>}
           answer={
             <>
               G usually broadcasts co-working streams on Twitch 4 days a week. In each co-working
@@ -31,17 +81,20 @@ export default function About() {
               </a>
             </>
           }
+          image={<span className="font-size:100px">&#10067;</span>}
         />
         <QuestionBox
-          question="Who does it work for?"
+          image={<span className="font-size:100px">&#128522;</span>}
+          question={<a id="who-does-it-work-for">Who does it work for?</a>}
           answer="Co-working streams can help everyone. 
           Whether you're studying at university, working for a big company or freelancing, 
           it's a space to focus and get things done alongside a friendly community.
           "
         />
         <QuestionBox
+          image={<span className="font-size:100px">&#129351;</span>}
           className="sm:col-span-2"
-          question="Why does it work?"
+          question={<a id="why-does-it-work">Why does it work?</a>}
           answer={
             <>
               <p>
@@ -77,17 +130,20 @@ export default function About() {
           }
         />
         <QuestionBox
-          question="How did it start?"
+          image={<span className="font-size:100px">&#128640;</span>}
+          question={<a id="how-did-it-start">How did it start?</a>}
           answer="G started streaming in November 2020 because her internship went fully remote during lockdown. Suddenly alone and struggling to focus, G decided to try streaming on Twitch to stay accountable. StudyTme’s popularity was totally unexpected, but G is loving the journey!
           "
         />
         <QuestionBox
-          question="How we differ from the hustle culture?"
+          image={<span className="font-size:100px">&#128581;</span>}
+          question={<a id="difference-hustle">How we differ from the hustle culture?</a>}
           answer="The CEO Gang places a lot of importance on using your energy effectively and listening to your needs. If you’re feeling tired, you need to listen to your body and rest to be the most effective you can be. Burning out is one of the worst ways people lose their productivity - you can’t ‘hustle’ if you’re too tired to function.
           "
         />
         <QuestionBox
-          question="What does CEOgang mean?"
+          image={<span className="font-size:100px">&#128188;</span>}
+          question={<a id="ceogang-meaning">What does CEOgang mean?</a>}
           answer="Being a CEO (Chief Executive Officer) literally means to be ultimately responsible 
           for taking managerial decisions of a company. The idea is that we the CEOgang are concious of
           being the final responsible of our lifes, but also of the reality we live in."
@@ -97,14 +153,17 @@ export default function About() {
   );
 }
 
-const QuestionBox = (props: { question: string; answer: ReactNode; className?: string }) => {
+const QuestionBox = (props: {
+  question: ReactNode;
+  answer: ReactNode;
+  className?: string;
+  image: ReactNode;
+}) => {
   return (
-    <div className={"p-5 bg-gray-100 rounded-lg " + props.className}>
-      <div className="flex items-center justify-between gap-4 pb-4 mb-4 border-b">
+    <div className={"p-5 shadow-lg rounded-lg bg-white " + props.className}>
+      <div className="flex items-center gap-4 pb-4 mb-4 border-b">
+        <div>{props.image}</div>
         <h3 className="font-semibold text-twitch-purple sm:text-lg md:text-xl">{props.question}</h3>
-        <span className="inline-flex items-center justify-center w-8 h-8 text-gray-500 bg-gray-300 rounded-full shrink-0">
-          <HiQuestionMarkCircle className="w-6 h-6" />
-        </span>
       </div>
       <div className="text-gray-500">{props.answer}</div>
     </div>
