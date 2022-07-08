@@ -7,18 +7,18 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex-grow">
+    <div className="flex-grow ">
       <Head>
         <title>StudyTme</title>
       </Head>
-      <section className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
-        <div className="max-h-screen ">
-          <video className="rounded-3xl" autoPlay muted loop>
+      <section className="grid items-center grid-cols-3 gap-4 mb-10 md:gap-12 h-headerless-screen">
+        <div className="flex flex-col items-center col-span-3 py-4 md:col-span-1">
+          <video className="rounded-3xl md:h-auto h-96" autoPlay muted loop>
             <source src="/images/360g.mp4" type="video/mp4" />
             Spinning G
           </video>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3 md:col-span-2">
           <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
           <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
           <Socials />
@@ -35,9 +35,16 @@ const Home: NextPage = () => {
       </section>
 
       <section className="py-5 ">
-        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start">
+        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-stretch 2xl:space-x-8">
           <AboutCard
-            title="Coworking Live"
+            title="Twitch"
+            image={
+              <img
+                className="rounded-lg fill-current "
+                src={"/images/twitch.png"}
+                alt="studytme on twitch screenshot"
+              />
+            }
             button={
               <Link href="https://www.twitch.tv/studytme" passHref>
                 <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
@@ -49,10 +56,8 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  This is where you will find me live
-                  <span className="font-bold"> 5 days a week! </span>
-                  You can check out my
-                  <span className="font-bold"> stream schedule </span>
+                  This is where you will find me live 5 days a week! You can check out my stream
+                  schedule{" "}
                   <Link href="/schedule" passHref>
                     <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
                       here
@@ -60,34 +65,28 @@ const Home: NextPage = () => {
                   </Link>
                   .
                 </p>
-                <span className="">Join to:</span>
-                <ul className="ml-5 list-disc">
-                  <li>
-                    Not sure what co-working live is?{" "}
-                    <Link href="/faq" passHref>
-                      <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
-                        Find out more
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <span className="font-bold text-twitch-purple">
-                      You{"'"}ll also find extra streams where we:
-                    </span>
-                    :
-                    <ul className="ml-5 list-disc">
-                      <li>learn to code</li>
-                      <li>improve in competitive videogames</li>
-                      <li>get career advice/work on our CVs</li>
-                    </ul>
-                  </li>
-                </ul>
               </>
             }
+            midtitle={"Why Join?"}
+            emote1={<p>⏲</p>}
+            emote2={<p>✅</p>}
+            emote3={<p>😞</p>}
+            emote4={<p>💪</p>}
+            text1={<span className="whitespace-nowrap">Rhythm</span>}
+            text2={<span className="whitespace-nowrap">To-do lists</span>}
+            text3={<span className="whitespace-nowrap">Less alone</span>}
+            text4={<span className="whitespace-nowrap">Motivation</span>}
+            finaltext={"and more..."}
           />
-
           <AboutCard
-            title="An Ordinary Life"
+            title="Youtube"
+            image={
+              <img
+                className="rounded-lg fill-current "
+                src={"/images/yt.png"}
+                alt="studytme on youtube screenshot"
+              />
+            }
             button={
               <Link href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g" passHref>
                 <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
@@ -99,20 +98,30 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  Want to follow G on her quest to become a better human being?
+                  G is far from perfect. Her videos follow her journey to become a better person.
                 </p>
-                <span>Check out her YouTube channel for:</span>
-                <ul className="ml-5 list-disc">
-                  <li>vlogs about her messy life</li>
-                  <li>interviews with guests on stream</li>
-                  <li>playlists to study/work/relax to</li>
-                </ul>
               </>
             }
+            midtitle={"What will you find?"}
+            emote1={<p>📷</p>}
+            emote2={<p>📚</p>}
+            emote3={<p>💬</p>}
+            emote4={<p>🎬</p>}
+            text1={<span className="whitespace-nowrap">Vlogs</span>}
+            text2={<span className="whitespace-nowrap">Book reviews</span>}
+            text3={<span className="whitespace-nowrap">Interviews</span>}
+            text4={<span className="whitespace-nowrap">VODs</span>}
+            finaltext={"and more..."}
           />
-
           <AboutCard
-            title="Online Community"
+            title="Discord"
+            image={
+              <img
+                className="rounded-lg fill-current "
+                src={"/images/gang.png"}
+                alt="studytme on discord screenshot"
+              />
+            }
             button={
               <Link href="https://www.discord.gg/ceogang" passHref>
                 <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
@@ -124,42 +133,21 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  The CEOgang is an{" "}
-                  <span className="font-bold">Official Discord Partner Server</span>.
+                  Discord is the easiest way to keep in touch with the community. Join study rooms,
+                  hang out and find out all the latest news.
                 </p>
-                <span className="">You will find:</span>
-                <ul className="ml-5 list-disc">
-                  <li>
-                    <span className="font-bold text-twitch-purple">Bookclub</span>: talk about
-                    interesting books and improve your English skills.
-                    <ul className="ml-5 list-disc">
-                      <li>everyone is welcome</li>
-                      <li>last Sunday of the month</li>
-                      <li>no need to read the book to participate</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="font-bold text-twitch-purple">Virtual study rooms</span>: to
-                    stay accountable and study/work alongside other people
-                    <ul className="ml-5 list-disc">
-                      <li>with or without cam on, as you wish</li>
-                      <li>24/7 co-working, we have members in almost every country</li>
-                      <li>friendly faces and a well moderated community</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="font-bold text-twitch-purple">MasterMinds</span>: master the
-                    English language in a relaxed environment
-                    <ul className="ml-5 list-disc">
-                      <li>
-                        open to everyone at any level of English (people join to learn and to help)
-                      </li>
-                      <li>4 sessions across 2 days (more info on Discord) </li>
-                    </ul>
-                  </li>
-                </ul>
               </>
             }
+            midtitle={"What will you find?"}
+            emote1={<p>💻</p>}
+            emote2={<p>🤗</p>}
+            emote3={<p>📚</p>}
+            emote4={<p>🧠</p>}
+            text1={<span className="whitespace-nowrap">Study rooms</span>}
+            text2={<span className="whitespace-nowrap">Community</span>}
+            text3={<span className="whitespace-nowrap">Bookclub</span>}
+            text4={<span className="whitespace-nowrap">Masterminds</span>}
+            finaltext={"and more..."}
           />
         </div>
       </section>
@@ -213,11 +201,49 @@ const Home: NextPage = () => {
   );
 };
 
-const AboutCard = (props: { title: string; content: ReactNode; button: ReactNode }) => {
+const AboutCard = (props: {
+  title: string;
+  content: ReactNode;
+  button: ReactNode;
+  image: ReactNode;
+  midtitle: string;
+  emote1: ReactNode;
+  emote2: ReactNode;
+  emote3: ReactNode;
+  emote4: ReactNode;
+  text1: ReactNode;
+  text2: ReactNode;
+  text3: ReactNode;
+  text4: ReactNode;
+  finaltext: string;
+}) => {
   return (
-    <div className="flex flex-col p-4 my-4 bg-gray-100 rounded-lg sm:w-3/4 2xl:mx-2 text-slate-500">
+    <div className="flex flex-col px-4 py-6 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 text-slate-500 ">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
-      <div className="space-y-4">{props.content}</div>
+      <div className="w-full mb-3">{props.image}</div>
+      <hr className="self-center w-1/4 border-gray-400 border-1" />
+      <div className="self-center w-4/5 mt-3 space-y-4 italic">{props.content}</div>
+      <hr className="self-center w-3/4 mb-auto border-gray-400 border-1" />
+      <div className="self-center m-4 font-bold text-gray-800">{props.midtitle}</div>
+      <div className="grid self-center w-4/5 grid-cols-2 grid-rows-2 gap-4">
+        <div className="grid items-center grid-cols-4 gap-4">
+          <div className="w-2/3 col-span-1">{props.emote1}</div>
+          <div className="col-span-3 text-gray-900 align-center">{props.text1}</div>
+        </div>
+        <div className="grid items-center grid-cols-4 gap-4">
+          <div className="w-2/3 col-span-1">{props.emote2}</div>
+          <div className="col-span-3 text-gray-900 align-center">{props.text2}</div>
+        </div>
+        <div className="grid items-center grid-cols-4 gap-4">
+          <div className="w-2/3 col-span-1">{props.emote3}</div>
+          <div className="col-span-3 text-gray-900 align-center">{props.text3}</div>
+        </div>
+        <div className="grid items-center grid-cols-4 gap-4">
+          <div className="w-2/3 col-span-1 ">{props.emote4}</div>
+          <div className="col-span-3 text-gray-900 align-center">{props.text4}</div>
+        </div>
+      </div>
+      <div className="self-center my-4 italic font-bold">{props.finaltext}</div>
       <div className="self-center pt-2">{props.button}</div>
     </div>
   );
