@@ -17,7 +17,7 @@ const Resources = () => {
           image={<img src="/images/finance.png" alt="studytme finance tracker template" />}
           title={<a id="finance-tracker">Finance Tracker</a>}
           description={
-            "3 files that you can use to keep track of your expensenses and incomes so you will always know your status. You know what they say: knowledge is power."
+            "3 files that you can use to keep track of your expenses and incomes so you will always know your status. You know what they say: knowledge is power."
           }
           link={
             "https://drive.google.com/drive/folders/1lV9OkW8WEek0vhrdkxh7bKksxKHX_C0V?usp=sharing"
