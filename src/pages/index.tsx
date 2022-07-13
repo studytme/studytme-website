@@ -2,6 +2,7 @@ import { FaDiscord, FaTwitch, FaYoutube } from "react-icons/fa";
 import { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import OutlinedLinkButton from "../components/Buttons/OulinedLinkButton";
 import Socials from "../components/socials";
 import type { NextPage } from "next";
 
@@ -46,12 +47,11 @@ const Home: NextPage = () => {
               />
             }
             button={
-              <Link href="https://www.twitch.tv/studytme" passHref>
-                <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
-                  <FaTwitch className="mr-2" />
-                  <a>Twitch</a>
-                </button>
-              </Link>
+              <OutlinedLinkButton
+                icon={<FaTwitch />}
+                text={"Twitch"}
+                href={"https://www.twitch.tv/studytme"}
+              />
             }
             content={
               <>
@@ -88,12 +88,11 @@ const Home: NextPage = () => {
               />
             }
             button={
-              <Link href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g" passHref>
-                <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
-                  <FaYoutube className="mr-2" />
-                  <a>YouTube</a>
-                </button>
-              </Link>
+              <OutlinedLinkButton
+                icon={<FaYoutube />}
+                text={"Youtube"}
+                href={"https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g"}
+              />
             }
             content={
               <>
@@ -123,12 +122,11 @@ const Home: NextPage = () => {
               />
             }
             button={
-              <Link href="https://www.discord.gg/ceogang" passHref>
-                <button className="flex items-center px-4 py-2 mt-2 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
-                  <FaDiscord className="mr-2" />
-                  <a>Discord</a>
-                </button>
-              </Link>
+              <OutlinedLinkButton
+                icon={<FaDiscord />}
+                text={"Discord"}
+                href={"https://www.discord.gg/ceogang"}
+              />
             }
             content={
               <>
@@ -152,11 +150,13 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center my-24 text-center">
-        <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
-        <p className="text-sm italic font-medium text-slate-400 ">Designed by Giulia</p>
+      <section className="flex flex-col gap-8 items-center my-24 text-center">
+        <div>
+          <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
+          <p className="text-sm italic font-medium text-slate-400 ">Designed by Giulia</p>
+        </div>
 
-        <div className="grid grid-cols-2 mt-8 md:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-4">
           <div className="mx-2">
             <img
               className="rounded-lg fill-current"
@@ -187,15 +187,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-center my-5">
-          <button className="items-center px-4 py-2 mt-5 font-semibold bg-transparent border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white hover:border-transparent">
-            <div className="flex items-center justify-center">
-              <Link href="https://merch.studytme.com" passHref>
-                <a>Check the merch</a>
-              </Link>
-            </div>
-          </button>
-        </div>
+        <OutlinedLinkButton text="Check the merch" href="https://merch.studytme.com" />
       </section>
     </div>
   );
@@ -244,7 +236,7 @@ const AboutCard = (props: {
         </div>
       </div>
       <div className="self-center my-4 italic font-bold">{props.finaltext}</div>
-      <div className="self-center pt-2">{props.button}</div>
+      <div className="self-center pt-4">{props.button}</div>
     </div>
   );
 };
