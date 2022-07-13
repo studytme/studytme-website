@@ -17,12 +17,13 @@ const Header = () => {
 
         <ul className="hidden sm:flex">
           <HeaderLinkItem path="/" label="Home" />
-          <HeaderLinkItem path="/faq" label="FAQ" />
+          <HeaderLinkItem path="/resources" label="Free Resources" />
           <HeaderLinkItem path="/sponsors" label="Sponsors" />
+          <HeaderLinkItem path="/faq" label="FAQ" />
         </ul>
         <NavigationMenu />
 
-        <button className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple active:bg-twitch-purple hover:bg-twitch-purple-hover">
+        <button className="invisible px-4 py-2 font-bold text-white border rounded sm:visible bg-twitch-purple active:bg-twitch-purple hover:bg-twitch-purple-hover">
           <Link href="https://merch.studytme.com" passHref>
             <h1 className="hover:cursor-pointer ">Merch</h1>
           </Link>
@@ -85,9 +86,9 @@ const NavigationMenu = () => {
                 </LinkWrapper>
               </Menu.Item>
               <Menu.Item>
-                <LinkWrapper href="/faq">
+                <LinkWrapper href="/resources">
                   <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
-                    FAQ
+                    Free Resources
                   </div>
                 </LinkWrapper>
               </Menu.Item>
@@ -95,6 +96,20 @@ const NavigationMenu = () => {
                 <LinkWrapper href="/sponsors">
                   <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
                     Sponsors
+                  </div>
+                </LinkWrapper>
+              </Menu.Item>
+              <Menu.Item>
+                <LinkWrapper href="/faq">
+                  <div className="px-2 py-1 text-base font-medium text-gray-500 border-t border-gray-100 hover:text-gray-900">
+                    FAQ
+                  </div>
+                </LinkWrapper>
+              </Menu.Item>
+              <Menu.Item>
+                <LinkWrapper href="https://merch.studytme.com">
+                  <div className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple active:bg-twitch-purple hover:bg-twitch-purple-hover">
+                    Merch
                   </div>
                 </LinkWrapper>
               </Menu.Item>

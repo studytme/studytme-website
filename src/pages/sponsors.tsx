@@ -37,7 +37,7 @@ const Sponsors = () => (
         <AudienceCard
           title=" Total Followers"
           icon={<BsPeopleFill className="w-5 h-5 ml-2" />}
-          main="77k+"
+          main="82k+"
         />
         <AudienceCard
           title="Main Platform"
