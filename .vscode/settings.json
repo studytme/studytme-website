@@ -3,7 +3,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "typescript.tsdk": "src/app/node_modules/typescript/lib",
+  "typescript.tsdk": "/node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": false
@@ -17,15 +17,15 @@
   "[typescriptreact]": {
     "editor.formatOnSave": false
   },
-  "eslint.validate": [
-    "typescript, javascript"
-  ],
+  "eslint.validate": ["typescript, javascript"],
   "cSpell.words": [
     "Akiflow",
     "basicmug",
     "Bookclub",
     "Coworking",
+    "Enkk",
     "Giulia",
+    "giuliamazza",
     "Gprofile",
     "gtransparent",
     "headerless",
@@ -34,6 +34,7 @@
     "Lofi",
     "Mazza",
     "Merch",
+    "miki",
     "Pomodoro",
     "Surfshark",
     "videogames",

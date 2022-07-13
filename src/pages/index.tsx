@@ -11,14 +11,14 @@ const Home: NextPage = () => {
       <Head>
         <title>StudyTme</title>
       </Head>
-      <section className="grid items-center grid-cols-3 gap-12 h-headerless-screen">
-        <div className="max-h-screen ">
-          <video className="rounded-3xl" autoPlay muted loop>
+      <section className="grid items-center grid-cols-3 gap-4 mb-10 md:gap-12 h-headerless-screen">
+        <div className="flex flex-col items-center col-span-3 py-4 md:col-span-1">
+          <video className="rounded-3xl md:h-auto h-96" autoPlay muted loop>
             <source src="/images/360g.mp4" type="video/mp4" />
             Spinning G
           </video>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3 md:col-span-2">
           <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
           <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
           <Socials />
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       </section>
 
       <section className="py-5 ">
-        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-start">
+        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-stretch 2xl:space-x-8">
           <AboutCard
             title="Twitch"
             image={
@@ -68,14 +68,14 @@ const Home: NextPage = () => {
               </>
             }
             midtitle={"Why Join?"}
-            emote1={<img className="" src={"/images/timer.png"} alt="studytme timer" />}
-            emote2={<img className="" src={"/images/check.png"} alt="studytme check" />}
-            emote3={<img className="" src={"/images/sad.png"} alt="studytme sad" />}
-            emote4={<img className="" src={"/images/arm.png"} alt="studytme arm" />}
-            text1={"Rhythm"}
-            text2={"To-do lists"}
-            text3={"Less alone"}
-            text4={"Motivation"}
+            emote1={<p>⏲</p>}
+            emote2={<p>✅</p>}
+            emote3={<p>😞</p>}
+            emote4={<p>💪</p>}
+            text1={<span className="whitespace-nowrap">Rhythm</span>}
+            text2={<span className="whitespace-nowrap">To-do lists</span>}
+            text3={<span className="whitespace-nowrap">Less alone</span>}
+            text4={<span className="whitespace-nowrap">Motivation</span>}
             finaltext={"and more..."}
           />
           <AboutCard
@@ -103,14 +103,14 @@ const Home: NextPage = () => {
               </>
             }
             midtitle={"What will you find?"}
-            emote1={<img className="" src={"/images/cam.png"} alt="studytme cam" />}
-            emote2={<img className="" src={"/images/books.png"} alt="studytme check" />}
-            emote3={<img className="" src={"/images/speech.png"} alt="studytme speech" />}
-            emote4={<img className="" src={"/images/film.png"} alt="studytme film" />}
-            text1={"Vlogs"}
-            text2={"Book reviews"}
-            text3={"Interviews"}
-            text4={"VODs"}
+            emote1={<p>📷</p>}
+            emote2={<p>📚</p>}
+            emote3={<p>💬</p>}
+            emote4={<p>🎬</p>}
+            text1={<span className="whitespace-nowrap">Vlogs</span>}
+            text2={<span className="whitespace-nowrap">Book reviews</span>}
+            text3={<span className="whitespace-nowrap">Interviews</span>}
+            text4={<span className="whitespace-nowrap">VODs</span>}
             finaltext={"and more..."}
           />
           <AboutCard
@@ -139,14 +139,14 @@ const Home: NextPage = () => {
               </>
             }
             midtitle={"What will you find?"}
-            emote1={<img className="" src={"/images/pc.png"} alt="studytme pc" />}
-            emote2={<img className="" src={"/images/hug.png"} alt="studytme check" />}
-            emote3={<img className="" src={"/images/books.png"} alt="studytme sad" />}
-            emote4={<img className="" src={"/images/brain.png"} alt="studytme arm" />}
-            text1={"Virtual study rooms"}
-            text2={"Community"}
-            text3={"Bookclub"}
-            text4={"Masterminds"}
+            emote1={<p>💻</p>}
+            emote2={<p>🤗</p>}
+            emote3={<p>📚</p>}
+            emote4={<p>🧠</p>}
+            text1={<span className="whitespace-nowrap">Study rooms</span>}
+            text2={<span className="whitespace-nowrap">Community</span>}
+            text3={<span className="whitespace-nowrap">Bookclub</span>}
+            text4={<span className="whitespace-nowrap">Masterminds</span>}
             finaltext={"and more..."}
           />
         </div>
@@ -211,19 +211,19 @@ const AboutCard = (props: {
   emote2: ReactNode;
   emote3: ReactNode;
   emote4: ReactNode;
-  text1: string;
-  text2: string;
-  text3: string;
-  text4: string;
+  text1: ReactNode;
+  text2: ReactNode;
+  text3: ReactNode;
+  text4: ReactNode;
   finaltext: string;
 }) => {
   return (
-    <div className="flex flex-col p-4 my-4 rounded-lg shadow-lg sm:w-3/4 2xl:mx-2 text-slate-500">
+    <div className="flex flex-col px-4 py-6 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 text-slate-500 ">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="w-full mb-3">{props.image}</div>
       <hr className="self-center w-1/4 border-gray-400 border-1" />
       <div className="self-center w-4/5 mt-3 space-y-4 italic">{props.content}</div>
-      <hr className="self-center w-3/4 border-gray-400 border-1" />
+      <hr className="self-center w-3/4 mb-auto border-gray-400 border-1" />
       <div className="self-center m-4 font-bold text-gray-800">{props.midtitle}</div>
       <div className="grid self-center w-4/5 grid-cols-2 grid-rows-2 gap-4">
         <div className="grid items-center grid-cols-4 gap-4">
