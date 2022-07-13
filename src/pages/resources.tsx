@@ -24,6 +24,7 @@ const Resources = () => {
           }
         />
         <ResourceCard
+          className="hidden"
           image={<img src="/images/notion.png" alt="notion" />}
           title={<a id="notion-general-hub">Notion General Hub</a>}
           description={
@@ -32,6 +33,7 @@ const Resources = () => {
           link={""}
         />
         <ResourceCard
+          className="hidden"
           image={
             <img
               src="https://i.etsystatic.com/12366970/r/il/4f2167/2858382264/il_794xN.2858382264_7aqy.jpg"
@@ -58,13 +60,13 @@ const ResourceCard = (props: {
 }) => {
   return (
     <div className={"p-5 shadow-lg rounded-lg bg-white mb-5 " + props.className}>
-      <div className="grid items-center md:grid-cols-10">
-        <div className="md:col-span-2">{props.image}</div>
-        <div className="md:mx-5 md:col-span-7">
+      <div className="grid items-center sm:grid-cols-10">
+        <div className="sm:col-span-2">{props.image}</div>
+        <div className="sm:mx-5 sm:col-span-7">
           <h3 className="mt-4 font-semibold sm:text-lg md:text-xl md:mt-0">{props.title}</h3>
           <div className="text-gray-500">{props.description}</div>
         </div>
-        <div className="flex justify-center md:col-span-1 ">
+        <div className="flex justify-center sm:col-span-1 ">
           <button className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple hover:fill-twitch-purple-hover">
             <a href={props.link} target="_blank" rel="noreferrer">
               <h1 className=" hover:cursor-pointer">View</h1>
