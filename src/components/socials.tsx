@@ -14,7 +14,7 @@ const Socials = () => (
       <AiOutlineTwitter className="w-6 h-6" />
     </a>
     <a
-      href="https://www.instagram.com/itsstudytme/"
+      href="https://www.instagram.com/studytme_/"
       className="text-gray-800 hover:text-twitch-purple"
       target="_blank"
       rel="noreferrer"
