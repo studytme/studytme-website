@@ -2,6 +2,8 @@ import { HiQuestionMarkCircle } from "react-icons/hi";
 import { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import SolidButton from "../components/Buttons/SolidLinkButton";
+import SolidExternalLinkButton from "../components/Buttons/ExternalLinkButton";
 
 const Resources = () => {
   return (
@@ -67,11 +69,7 @@ const ResourceCard = (props: {
           <div className="text-gray-500">{props.description}</div>
         </div>
         <div className="flex justify-center sm:col-span-1 ">
-          <button className="px-4 py-2 font-bold text-white border rounded bg-twitch-purple hover:fill-twitch-purple-hover">
-            <a href={props.link} target="_blank" rel="noreferrer">
-              <h1 className=" hover:cursor-pointer">View</h1>
-            </a>
-          </button>
+          <SolidExternalLinkButton text={"View"} href={props.link} />
         </div>
       </div>
     </div>

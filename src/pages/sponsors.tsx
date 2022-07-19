@@ -2,6 +2,7 @@ import { BsPeopleFill } from "react-icons/bs";
 import { FaEnvelope, FaTwitch } from "react-icons/fa";
 import Head from "next/head";
 import Link from "next/link";
+import OutlinedButton from "../components/Buttons/OulinedLinkButton";
 import React, { ReactNode } from "react";
 import Socials from "../components/socials";
 
@@ -18,12 +19,12 @@ const Sponsors = () => (
           Content creator and community manager addicted to productivity
         </p>
         <Socials />
-        <Link href="mailto:info@studytme.com" passHref>
-          <button className="flex items-center px-3 py-2 mt-2 font-semibold border rounded text-twitch-purple border-twitch-purple hover:bg-twitch-purple hover:text-white">
-            <FaEnvelope className="mr-2" />
-            Contact Me
-          </button>
-        </Link>
+
+        <OutlinedButton
+          icon={<FaEnvelope />}
+          text={"Contact Me"}
+          href={"mailto:info@studytme.com"}
+        />
       </div>
       <img
         className="mt-10 border-none rounded-full sm:w-1/2 w-50vw sm:rounded-3xl "
