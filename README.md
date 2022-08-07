@@ -76,7 +76,7 @@ To learn more about Next.js, take a look at the following resources:
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Tailwindcss.com]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwind.com
+[Tailwind-url]: https://tailwindcss.com
 [Typescriptlang-img]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://Typescriptlang.org
 [Giuliamazza-url]: https://github.com/giuliamazza
