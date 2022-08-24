@@ -1,12 +1,30 @@
 import { FaDiscord, FaTwitch, FaYoutube } from "react-icons/fa";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import OutlinedLinkButton from "../components/Buttons/OulinedLinkButton";
 import Socials from "../components/socials";
-import type { NextPage } from "next";
+import homeLocaleContent from "../../locales/home";
+import type { GetStaticProps, NextPage } from "next";
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      locale: context.locale,
+      defaultLocale: context.defaultLocale,
+    },
+  };
+};
+
+const Home: NextPage<{ locale: string; defaultLocale: string }> = (props: {
+  locale: string;
+  defaultLocale: string;
+}) => {
+  const localeContent = useMemo(
+    () => homeLocaleContent[props.locale || props.defaultLocale],
+    [props.locale]
+  );
+
   return (
     <div className="flex-grow ">
       <Head>
@@ -23,15 +41,8 @@ const Home: NextPage = () => {
           <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
           <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
           <Socials />
-          <p className="mb-5 lg:text-2xl">
-            Giulia (or G for short) is the founder of the CEO Gang, a Twitch and Discord community
-            focused on productivity and mental wellbeing.
-          </p>
-          <p className="text-gray-500 lg:text-xl">
-            Giulia created StudyTme when she was studying Data Science and Digital Marketing at
-            university, but since graduating she{"'"}s expanded the channel to all aspects of
-            working and productivity, while developing the community itself.
-          </p>
+          <p className="mb-5 lg:text-2xl">{localeContent.subtitle}</p>
+          <p className="text-gray-500 lg:text-xl">{localeContent.description}</p>
         </div>
       </section>
 
@@ -56,27 +67,26 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  This is where you will find me live 5 days a week! You can check out my stream
-                  schedule{" "}
+                  {localeContent.twitch.description}
                   <Link href="/schedule" passHref>
                     <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
-                      here
+                      {localeContent.here}
                     </span>
                   </Link>
                   .
                 </p>
               </>
             }
-            midtitle={"Why Join?"}
+            midtitle={localeContent.twitch.midtitle}
             emote1={<p>⏲</p>}
             emote2={<p>✅</p>}
             emote3={<p>😞</p>}
             emote4={<p>💪</p>}
-            text1={<span className="whitespace-nowrap">Rhythm</span>}
-            text2={<span className="whitespace-nowrap">To-do lists</span>}
-            text3={<span className="whitespace-nowrap">Less alone</span>}
-            text4={<span className="whitespace-nowrap">Motivation</span>}
-            finaltext={"and more..."}
+            text1={<span className="whitespace-nowrap">{localeContent.twitch.first}</span>}
+            text2={<span className="whitespace-nowrap">{localeContent.twitch.second}</span>}
+            text3={<span className="whitespace-nowrap">{localeContent.twitch.third}</span>}
+            text4={<span className="whitespace-nowrap">{localeContent.twitch.fourth}</span>}
+            finaltext={localeContent.more}
           />
           <AboutCard
             title="Youtube"
@@ -96,21 +106,19 @@ const Home: NextPage = () => {
             }
             content={
               <>
-                <p className="mb-5">
-                  G is far from perfect. Her videos follow her journey to become a better person.
-                </p>
+                <p className="mb-5">{localeContent.youtube.description}</p>
               </>
             }
-            midtitle={"What will you find?"}
+            midtitle={localeContent.youtube.midtitle}
             emote1={<p>📷</p>}
             emote2={<p>📚</p>}
             emote3={<p>💬</p>}
             emote4={<p>🎬</p>}
-            text1={<span className="whitespace-nowrap">Vlogs</span>}
-            text2={<span className="whitespace-nowrap">Book reviews</span>}
-            text3={<span className="whitespace-nowrap">Interviews</span>}
-            text4={<span className="whitespace-nowrap">VODs</span>}
-            finaltext={"and more..."}
+            text1={<span className="whitespace-nowrap">{localeContent.youtube.first}</span>}
+            text2={<span className="whitespace-nowrap">{localeContent.youtube.second}</span>}
+            text3={<span className="whitespace-nowrap">{localeContent.youtube.third}</span>}
+            text4={<span className="whitespace-nowrap">{localeContent.youtube.fourth}</span>}
+            finaltext={localeContent.more}
           />
           <AboutCard
             title="Discord"
@@ -130,30 +138,31 @@ const Home: NextPage = () => {
             }
             content={
               <>
-                <p className="mb-5">
-                  Discord is the easiest way to keep in touch with the community. Join study rooms,
-                  hang out and find out all the latest news.
-                </p>
+                <p className="mb-5">{localeContent.discord.description}</p>
               </>
             }
-            midtitle={"What will you find?"}
+            midtitle={localeContent.discord.midtitle}
             emote1={<p>💻</p>}
             emote2={<p>🤗</p>}
             emote3={<p>📚</p>}
             emote4={<p>🧠</p>}
-            text1={<span className="whitespace-nowrap">Study rooms</span>}
-            text2={<span className="whitespace-nowrap">Community</span>}
-            text3={<span className="whitespace-nowrap">Bookclub</span>}
-            text4={<span className="whitespace-nowrap">Masterminds</span>}
-            finaltext={"and more..."}
+            text1={<span className="whitespace-nowrap">{localeContent.youtube.first}</span>}
+            text2={<span className="whitespace-nowrap">{localeContent.youtube.second}</span>}
+            text3={<span className="whitespace-nowrap">{localeContent.youtube.third}</span>}
+            text4={<span className="whitespace-nowrap">{localeContent.youtube.fourth}</span>}
+            finaltext={localeContent.more}
           />
         </div>
       </section>
 
       <section className="flex flex-col gap-8 items-center my-24 text-center">
         <div>
-          <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
-          <p className="text-sm italic font-medium text-slate-400 ">Designed by Giulia</p>
+          <h3 className="text-lg font-semibold text-black md:text-2xl">
+            {localeContent.merch.title}
+          </h3>
+          <p className="text-sm italic font-medium text-slate-400 ">
+            {localeContent.merch.subtitle}
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4">
@@ -187,7 +196,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <OutlinedLinkButton text="Check the merch" href="https://merch.studytme.com" />
+        <OutlinedLinkButton
+          text={localeContent.merch.button_text}
+          href="https://merch.studytme.com"
+        />
       </section>
     </div>
   );

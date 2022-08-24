@@ -1,29 +1,47 @@
+import { GetStaticProps, NextPage } from "next";
 import { HiQuestionMarkCircle } from "react-icons/hi";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import SolidButton from "../components/Buttons/SolidLinkButton";
 import SolidExternalLinkButton from "../components/Buttons/ExternalLinkButton";
+import resourcesLocaleContent from "../../locales/resources";
 
-const Resources = () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      locale: context.locale,
+      defaultLocale: context.defaultLocale,
+    },
+  };
+};
+
+const Resources: NextPage<{ locale: string; defaultLocale: string }> = (props: {
+  locale: string;
+  defaultLocale: string;
+}) => {
+  const localeContent = useMemo(
+    () => resourcesLocaleContent[props.locale || props.defaultLocale],
+    [props.locale]
+  );
+
   return (
     <div className="pt-8">
       <Head>
         <title>StudyTme - About</title>
       </Head>
-      <h1 className="font-serif text-2xl italic lg:text-3xl">Free Resources</h1>
-      <h3>These are materials that the community and G worked on together </h3>
+      <h1 className="font-serif text-2xl italic lg:text-3xl">{localeContent.title}</h1>
+      <h3>{localeContent.subtitle}</h3>
 
       <section className="mt-7">
         <ResourceCard
           image={<img src="/images/finance.png" alt="studytme finance tracker template" />}
-          title={<a id="finance-tracker">Finance Tracker</a>}
-          description={
-            "3 files that you can use to keep track of your expenses and incomes so you will always know your status. You know what they say: knowledge is power."
-          }
+          title={<a id="finance-tracker">{localeContent.finance_tracker.title}</a>}
+          description={localeContent.finance_tracker.description}
           link={
             "https://drive.google.com/drive/folders/1lV9OkW8WEek0vhrdkxh7bKksxKHX_C0V?usp=sharing"
           }
+          linkText={localeContent.view_text}
         />
         <ResourceCard
           className="hidden"
@@ -33,6 +51,7 @@ const Resources = () => {
             "You can use this as a template to organize your Notion, This is a general template, not specific for work or school."
           }
           link={""}
+          linkText={localeContent.view_text}
         />
         <ResourceCard
           className="hidden"
@@ -47,6 +66,7 @@ const Resources = () => {
             "Use this as a template for your curriculum vitae. We would always suggest to make it as personal as possible."
           }
           link={""}
+          linkText={localeContent.view_text}
         />
       </section>
     </div>
@@ -59,6 +79,7 @@ const ResourceCard = (props: {
   className?: string;
   image: ReactNode;
   link: string;
+  linkText: string;
 }) => {
   return (
     <div className={"p-5 shadow-lg rounded-lg bg-white mb-5 " + props.className}>
@@ -69,7 +90,7 @@ const ResourceCard = (props: {
           <div className="text-gray-500">{props.description}</div>
         </div>
         <div className="flex justify-center sm:col-span-1 ">
-          <SolidExternalLinkButton text={"View"} href={props.link} />
+          <SolidExternalLinkButton text={props.linkText} href={props.link} />
         </div>
       </div>
     </div>
