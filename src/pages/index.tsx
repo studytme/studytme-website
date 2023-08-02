@@ -91,7 +91,7 @@ const Home: NextPage = () => {
               <OutlinedLinkButton
                 icon={<FaYoutube />}
                 text={"Youtube"}
-                href={"https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g"}
+                href={"https://www.youtube.com/@studytmeITA"}
               />
             }
             content={
