@@ -30,7 +30,7 @@ const Socials = () => (
       <FaLinkedinIn className="w-6 h-6" />
     </a>
     <a
-      href="https://www.youtube.com/channel/UCuxc7Lc6Ar076_4MLLHIz6g"
+      href="https://www.youtube.com/@studytmeITA"
       className="transition-colors text-gray-800 hover:text-twitch-purple"
       target="_blank"
       rel="noreferrer"
