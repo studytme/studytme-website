@@ -8,9 +8,9 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex-grow ">
+    <div className="flex-grow">
       <Head>
-        <title>StudyTme</title>
+        <title>StudyTme - Work Smarter, Live Better</title>
       </Head>
       <section className="grid items-center grid-cols-3 gap-4 mb-10 md:gap-12 h-headerless-screen">
         <div className="flex flex-col items-center col-span-3 py-4 md:col-span-1">
@@ -21,27 +21,28 @@ const Home: NextPage = () => {
         </div>
         <div className="col-span-3 md:col-span-2">
           <h1 className="text-4xl font-bold lg:text-5xl lg:mb-2 md:text-4xl">StudyTme</h1>
-          <h2 className="font-serif text-2xl italic lg:text-3xl ">aka Giulia Mazza</h2>
+          <h2 className="font-serif text-2xl italic lg:text-3xl">aka Giulia Mazza</h2>
           <Socials />
           <p className="mb-5 lg:text-2xl">
-            Giulia (or G for short) is the founder of the CEO Gang, a Twitch and Discord community
-            focused on productivity and mental wellbeing.
+            Giulia—affectionately known as G—is a data scientist turned productivity guru and community builder.
+            As the founder of the CEO Gang, she transformed her personal study sessions into a global movement,
+            inspiring remote workers and students to work smarter and combat isolation.
           </p>
           <p className="text-gray-500 lg:text-xl">
-            Giulia created StudyTme when she was studying Data Science and Digital Marketing at
-            university, but since graduating she{"'"}s expanded the channel to all aspects of
-            working and productivity, while developing the community itself.
+            Raised near Verona, Italy and having lived in Taiwan, Paris, and Grenoble, Giulia brings a unique, international
+            perspective to balancing work and life. Her journey fuels an authentic approach to productivity, mental wellbeing,
+            and self-growth.
           </p>
         </div>
       </section>
 
-      <section className="py-5 ">
+      <section className="py-5">
         <div className="flex flex-col items-center 2xl:flex-row 2xl:items-stretch 2xl:space-x-8">
           <AboutCard
             title="Twitch"
             image={
               <img
-                className="rounded-lg fill-current "
+                className="rounded-lg fill-current"
                 src={"/images/twitch.png"}
                 alt="studytme on twitch screenshot"
               />
@@ -56,8 +57,8 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  This is where you will find me live 5 days a week! You can check out my stream
-                  schedule{" "}
+                  Join me live 5 days a week on Twitch where over 82k followers tune in for productive study sessions,
+                  practical productivity hacks, and a genuine sense of community. Check out my stream schedule{" "}
                   <Link href="/schedule" passHref>
                     <span className="font-bold cursor-pointer text-twitch-purple hover:underline hover:text-twitch-purple-hover">
                       here
@@ -70,19 +71,19 @@ const Home: NextPage = () => {
             midtitle={"Why Join?"}
             emote1={<p>⏲</p>}
             emote2={<p>✅</p>}
-            emote3={<p>😞</p>}
-            emote4={<p>💪</p>}
-            text1={<span className="whitespace-nowrap">Rhythm</span>}
-            text2={<span className="whitespace-nowrap">To-do lists</span>}
-            text3={<span className="whitespace-nowrap">Less alone</span>}
-            text4={<span className="whitespace-nowrap">Motivation</span>}
+            emote3={<p>🤝</p>}
+            emote4={<p>💡</p>}
+            text1={<span className="whitespace-nowrap">Structured Sessions</span>}
+            text2={<span className="whitespace-nowrap">Actionable Tips</span>}
+            text3={<span className="whitespace-nowrap">Community Support</span>}
+            text4={<span className="whitespace-nowrap">Inspiration</span>}
             finaltext={"and more..."}
           />
           <AboutCard
             title="Youtube"
             image={
               <img
-                className="rounded-lg fill-current "
+                className="rounded-lg fill-current"
                 src={"/images/yt.png"}
                 alt="studytme on youtube screenshot"
               />
@@ -97,7 +98,8 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  G is far from perfect. Her videos follow her journey to become a better person.
+                  On YouTube, I share my journey as a remote work and productivity advocate—offering a behind-the-scenes
+                  look at my daily routines, study sessions, and personal growth adventures.
                 </p>
               </>
             }
@@ -107,16 +109,16 @@ const Home: NextPage = () => {
             emote3={<p>💬</p>}
             emote4={<p>🎬</p>}
             text1={<span className="whitespace-nowrap">Vlogs</span>}
-            text2={<span className="whitespace-nowrap">Book reviews</span>}
+            text2={<span className="whitespace-nowrap">Productivity Tips</span>}
             text3={<span className="whitespace-nowrap">Interviews</span>}
-            text4={<span className="whitespace-nowrap">VODs</span>}
+            text4={<span className="whitespace-nowrap">Tutorials</span>}
             finaltext={"and more..."}
           />
           <AboutCard
             title="Discord"
             image={
               <img
-                className="rounded-lg fill-current "
+                className="rounded-lg fill-current"
                 src={"/images/gang.png"}
                 alt="studytme on discord screenshot"
               />
@@ -131,8 +133,8 @@ const Home: NextPage = () => {
             content={
               <>
                 <p className="mb-5">
-                  Discord is the easiest way to keep in touch with the community. Join study rooms,
-                  hang out and find out all the latest news.
+                  Connect with a vibrant community of remote workers and students on Discord. Join study rooms,
+                  exchange productivity tips, and stay updated with the latest news in a supportive environment.
                 </p>
               </>
             }
@@ -141,10 +143,10 @@ const Home: NextPage = () => {
             emote2={<p>🤗</p>}
             emote3={<p>📚</p>}
             emote4={<p>🧠</p>}
-            text1={<span className="whitespace-nowrap">Study rooms</span>}
-            text2={<span className="whitespace-nowrap">Community</span>}
-            text3={<span className="whitespace-nowrap">Bookclub</span>}
-            text4={<span className="whitespace-nowrap">Masterminds</span>}
+            text1={<span className="whitespace-nowrap">Study Rooms</span>}
+            text2={<span className="whitespace-nowrap">Accountability Buddies</span>}
+            text3={<span className="whitespace-nowrap">Book Club</span>}
+            text4={<span className="whitespace-nowrap">Brainstorming</span>}
             finaltext={"and more..."}
           />
         </div>
@@ -153,7 +155,7 @@ const Home: NextPage = () => {
       <section className="flex flex-col gap-8 items-center my-24 text-center">
         <div>
           <h3 className="text-lg font-semibold text-black md:text-2xl">Get the latest drip</h3>
-          <p className="text-sm italic font-medium text-slate-400 ">Designed by Giulia</p>
+          <p className="text-sm italic font-medium text-slate-400">Designed by Giulia</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4">
@@ -173,14 +175,14 @@ const Home: NextPage = () => {
           </div>
           <div className="invisible h-0 mx-2 md:visible md:h-auto">
             <img
-              className="rounded-lg fill-current "
+              className="rounded-lg fill-current"
               src={"/images/merch3.png"}
               alt="sand tee back"
             />
           </div>
           <div className="invisible h-0 mx-2 md:visible md:h-auto">
             <img
-              className="rounded-lg fill-current "
+              className="rounded-lg fill-current"
               src={"/images/basicmug.png"}
               alt="black mug"
             />
@@ -210,7 +212,7 @@ const AboutCard = (props: {
   finaltext: string;
 }) => {
   return (
-    <div className="flex flex-col px-4 py-6 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 text-slate-500 ">
+    <div className="flex flex-col px-4 py-6 my-4 bg-white rounded-lg shadow-lg sm:w-3/4 text-slate-500">
       <h2 className="w-full mb-4 text-2xl font-bold text-twitch-purple">{props.title}</h2>
       <div className="w-full mb-3">{props.image}</div>
       <hr className="self-center w-1/4 border-gray-400 border-1" />
@@ -231,7 +233,7 @@ const AboutCard = (props: {
           <div className="col-span-3 text-gray-900 align-center">{props.text3}</div>
         </div>
         <div className="grid items-center grid-cols-4 gap-4">
-          <div className="w-2/3 col-span-1 ">{props.emote4}</div>
+          <div className="w-2/3 col-span-1">{props.emote4}</div>
           <div className="col-span-3 text-gray-900 align-center">{props.text4}</div>
         </div>
       </div>
